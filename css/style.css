@@ -1,0 +1,96 @@
+body {
+    background-color: #505050
+}
+
+.bg_darker {
+    background-color: #424242!important
+}
+
+.text-primary {
+    color: #999!important
+}
+
+a.text-primary:focus,a.text-primary:hover {
+    color: #a992a9!important;
+    text-decoration: none
+}
+
+input.bg_darker,input.bg_darker::placeholder,textarea::placeholder {
+    color: #999!important
+}
+
+.form-control {
+    border: 0!important
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: inherit;
+    outline: 0;
+    box-shadow: none
+}
+
+.sticky-top {
+    top: 50px
+}
+
+.btn-primary,.btn-primary:hover {
+    color: #a992a9;
+    background-color: #424242;
+    border-color: #a992a9
+}
+
+.btn-primary:hover {
+    background-color: #494848
+}
+
+.btn-succes:hover,.btn-success {
+    color: #fff;
+    background-color: #a992a9;
+    border-color: #a992a9
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: none!important
+}
+
+textarea {
+    background-color: #494848!important;
+    color: #999!important;
+    resize: none
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.progress-bar {
+    background-color: #a992a9!important;
+}
+
+.progress {
+    background-color: #505050!important;
+}
+
+.bg_input {
+    background-color: #505050!important;
+}
+
+.bg_username {
+    background-color: #a992a9!important;
+}

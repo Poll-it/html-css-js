@@ -94,3 +94,15 @@ textarea {
 .bg_username {
     background-color: #a992a9!important;
 }
+
+.nav-link.active {
+    color: white !important;
+    background-color: #a992a9 !important;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* Profil page */
+
+.bg_icon_profile {
+    background-color: #505050;
+}

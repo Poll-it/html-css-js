@@ -3,8 +3,12 @@ body {
     background-color: #505050
 }
 
+a {
+    text-decoration: none!important;
+}
+
 .bg_darker {
-    background-color: #424242!important
+    background-color: #424242!important;
 }
 
 .text-primary {

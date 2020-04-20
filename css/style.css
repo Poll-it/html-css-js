@@ -1,3 +1,4 @@
+
 body {
     background-color: #505050
 }
@@ -105,4 +106,8 @@ textarea {
 
 .bg_icon_profile {
     background-color: #505050;
+}
+
+.text-message {
+    width: 50%;
 }

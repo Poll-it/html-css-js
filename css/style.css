@@ -1,27 +1,5 @@
-
-body {
-    background-color: #505050
-}
-
 a {
     text-decoration: none!important;
-}
-
-.bg_darker {
-    background-color: #424242!important;
-}
-
-.text-primary {
-    color: #999!important
-}
-
-a.text-primary:focus,a.text-primary:hover {
-    color: #a992a9!important;
-    text-decoration: none
-}
-
-input.bg_darker,input.bg_darker::placeholder,textarea::placeholder {
-    color: #999!important
 }
 
 .form-control {
@@ -29,43 +7,18 @@ input.bg_darker,input.bg_darker::placeholder,textarea::placeholder {
 }
 
 .form-control:focus {
-    color: #495057;
-    background-color: #fff;
     border-color: inherit;
     outline: 0;
     box-shadow: none
 }
 
 .sticky-top {
-    top: 50px
-}
-
-.btn-primary,.btn-primary:hover {
-    color: #a992a9;
-    background-color: #424242;
-    border-color: #a992a9
-}
-
-.btn-primary:hover {
-    background-color: #494848
-}
-
-.btn-succes:hover,.btn-success {
-    color: #fff;
-    background-color: #a992a9;
-    border-color: #a992a9
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: none!important
+    top: 50px;
+    margin-bottom: 5%;
 }
 
 textarea {
-    background-color: #494848!important;
-    color: #999!important;
-    resize: none
+    resize: none;
 }
 
 .has-search .form-control {
@@ -84,34 +37,34 @@ textarea {
     color: #aaa;
 }
 
-.progress-bar {
-    background-color: #a992a9!important;
+.nav-link.active {
+    color: white!important;
+    background-color: #8862e0!important;
 }
 
 .progress {
-    background-color: #505050!important;
+    background-color: #aaa!important;
 }
 
-.bg_input {
-    background-color: #505050!important;
+.profile {
+    color: white;
+    text-align: center;
 }
 
-.bg_username {
-    background-color: #a992a9!important;
+.profile .wrapper {
+    width: 70%;
+    margin: -100px auto auto;
 }
 
-.nav-link.active {
-    color: white !important;
-    background-color: #a992a9 !important;
-    border-color: #dee2e6 #dee2e6 #fff;
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
 }
 
-/* Profil page */
-
-.bg_icon_profile {
-    background-color: #505050;
-}
-
-.text-message {
-    width: 50%;
+.background {
+    height: 200px;
+    background-size: cover;
 }

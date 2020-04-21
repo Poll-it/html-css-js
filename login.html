@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pull it</title>
+        <link rel="stylesheet" href="css/fas.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="bg-primary">
+        <div class="container mt-5">
+            <div class="row bg-dark">
+                <div class="col-md m-5">
+                    <img src="//placehold.it/400" class="img-fluid " alt="Logo">
+                </div>
+                <div class="col-md m-5">
+                    <form>
+                        <div class="form-group">
+                            <label for="nickname" class="text-light">Nom d'utilisateur</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control text-light" id="nickname" placeholder="Nom d'utilisateur">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="text-light">Mot de passe</label>
+                            <input type="password" class="form-control text-light" id="password" placeholder="Mot de passe">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-secondary">Se connecter</button>
+                            <p class="text-light">Vous n'avez pas de compte? <a href="register.php" class="text-secondary">Inscrivez-vous!</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mt-5">
+
+            <div class="row mb-3">
+                <div class="col-md-4 mb-2">
+                    <div class="card bg-dark text-light">
+                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="Découvrir">
+                        <div class="card-body">
+                            <h5 class="card-title">Découvrir</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque deleniti asperiores molestias eius. Similique iusto libero dolore eum hic unde, quasi in quibusdam modi officiis quisquam dignissimos repellat quas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="card bg-dark text-light">
+                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="Partager">
+                        <div class="card-body">
+                            <h5 class="card-title">Partager</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor molestiae quasi facere cum repudiandae accusantium qui, quos nobis, eaque architecto deserunt voluptas dolorem neque amet, laborum aut cumque recusandae ut.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="card bg-dark text-light">
+                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="S'insipirer">
+                        <div class="card-body">
+                            <h5 class="card-title">S'inspirer</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel delectus ducimus rem voluptates perspiciatis ad beatae repudiandae et dignissimos molestias omnis cum quas adipisci voluptate veniam, accusantium perferendis odit soluta?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4500" style="position: absolute; top: 1rem; right: 1rem;">
+            <div class="toast-header">
+                <strong class="mr-auto">Système</strong> <small>Maintenant</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body" id="message"></div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>

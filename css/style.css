@@ -69,7 +69,7 @@ textarea {
     background-size: cover;
 }
 
-.list-group-item {
+a.list-group-item {
     position: relative;
     display: block;
     padding: 1rem 0.75rem!important;
@@ -77,8 +77,8 @@ textarea {
     border: none!important;
 }
 
-a.bg-dark:hover, a.bg-dark:focus {
-    background-color: inherit!important;
+.list-group-item.active, a.bg-dark:hover, a.bg-dark:focus {
+    background-color: #1c1e2f!important;
 }
 
 .container-scroll {

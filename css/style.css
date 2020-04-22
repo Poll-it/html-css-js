@@ -68,3 +68,24 @@ textarea {
     height: 200px;
     background-size: cover;
 }
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 1rem 0.75rem!important;
+    background-color: inherit!important;
+    border: none!important;
+}
+
+a.bg-dark:hover, a.bg-dark:focus {
+    background-color: inherit!important;
+}
+
+.container-scroll {
+    overflow: auto!important;
+    height: 400px;
+}
+
+.size-message {
+    width: 98%;
+}

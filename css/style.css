@@ -89,3 +89,7 @@ a.list-group-item {
 .size-message {
     width: 98%;
 }
+
+.input-group-text {
+    border: none!important;
+}

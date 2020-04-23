@@ -97,3 +97,7 @@ a.list-group-item {
 .dropdown-menu {
     z-index: auto!important;
 }
+
+.popover-body {
+    background-color: #222437!important;
+}

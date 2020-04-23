@@ -83,7 +83,13 @@
                                     <a class="text-light" href="#">@Karla</a>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a class="btn btn-primary text-light mb-2" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                                    <button type="button" class="btn btn-primary mb-2" data-container="body" data-toggle="popover" data-placement="right" data-content="
+                                        <a href='#' class='row m-2 text-light'>Masquer</a>
+                                        <a href='#' class='row m-2 text-light'>Signaler</a>
+                                        <a href='#' class='row m-2 text-light'>Supprimer</a>
+                                    ">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                     <p>Publié le 16/04/2020 à 10h44</p>
                                 </div>
                             </div>
@@ -374,5 +380,10 @@
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover({html:true})
+            })
+        </script>
     </body>
 </html>

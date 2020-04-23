@@ -93,3 +93,7 @@ a.list-group-item {
 .input-group-text {
     border: none!important;
 }
+
+.dropdown-menu {
+    z-index: auto!important;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull it</title>
+    <link rel="stylesheet" href="css/fas.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.min.css">
+</head>
+
+<body class="bg-primary">
+<div class="container-fluid mt-5">
+    <div class="row mr-4 ml-4">
+        <div class="col-2">
+            <ul class="card nav flex-column p-3 sticky-top bg-dark">
+                <div class="align-self-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                            Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
+                                                                                class="rounded-circle img-flui"/> Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
+                    </li>
+                </div>
+                <div class="text-center">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                </div>
+                <a class="text-center text-light" href="about.html">A propos</i></a>
+                <a class="text-right text-light" href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+
+            </ul>
+        </div>
+
+        <div class="col-8">
+            <div class="row m-0 bg-dark">
+                <div class="col-3 mt-3">
+                    <div class="list-group" id="list" role="tablist">
+                        <a class="list-group-item list-group-item-action bg-dark text-light active" data-toggle="list"
+                           href="#list-1" role="tab">
+                            Paramètres du compte
+                        </a>
+                        <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                           href="#list-2" role="tab">
+                            Paramètres de sécurité
+                        </a>
+                        <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                           href="#list-3" role="tab">
+                            Paramètres de confidentialité
+                        </a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active text-light" id="list-1" role="tabpanel">
+
+
+
+                            <form class="mt-3">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="pseudo">Nom d'utilisateur *</label>
+                                        <input type="text" class="form-control bg-primary text-light"
+                                               id="pseudo">
+                                    </div>
+                                    <div class="col">
+                                        <label for="email">Adresse mail *</label>
+                                        <input type="text" class="form-control bg-primary text-light"
+                                               id="email">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row mt-5">
+                                    <div class="col custom-file">
+                                        <label for="email">Photo de profil</label>
+                                        <input type="file" class="custom-file-input" id="avatar">
+                                        <label class="custom-file-label bg-primary text-light" for="avatar">Choisissez une photo de profil</label>
+                                    </div>
+                                    <div class="col custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label bg-primary text-light" for="customFile">Choisissez une photo de couverture</label>
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+
+
+                            <div class="row justify-content-end">
+                                <button class="btn btn-secondary mt-4 mr-4" type="submit">Enregistrer</button>
+                            </div>
+                            <hr>
+                            <p class="m-3">Les champs marqués d'un astérisque sont obligatoires.</p>
+                        </div>
+                        <div class="tab-pane fade text-light" id="list-2" role="tabpanel">
+                            <form class="mt-3">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Mot de passe actuel *</label>
+                                    <input type="password" class="form-control bg-primary text-light"
+                                           id="exampleInputPassword1">
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="exampleInputPassword1">Nouveau mot de passe *</label>
+                                        <input type="password" class="form-control bg-primary text-light"
+                                               id="exampleInputPassword1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1">Confirmation *</label>
+                                        <input type="password" class="form-control bg-primary text-light"
+                                               id="exampleInputPassword1">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row justify-content-end">
+                                <button class="btn btn-secondary mt-4 mr-4" type="submit">Enregistrer</button>
+                            </div>
+                            <hr>
+                            <p class="m-3">Les champs marqués d'un astérisque sont obligatoires.</p>
+                        </div>
+
+
+                        <div class="tab-pane fade text-light" id="list-3" role="tabpanel">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="sticky-top">
+                <div class="card bg-dark text-light text-center">
+                    <div class="card-header">
+                        Suggestions pour vous
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <a class="card-text text-light" href="#">Les Français respectent-ils assez le confinement
+                                ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Considérez-vous l'adoption d'un animal comme une
+                                sortie de première nécessité ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-light text-center mt-3">
+                    <div class="card-header">
+                        Recommandations pour vous
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="sticky-top">
+                <div class="card bg-dark text-light text-center">
+                    <div class="card-header">
+                        Suggestions pour vous
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <a class="card-text text-light" href="#">Les Français respectent-ils assez le confinement
+                                ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Considérez-vous l'adoption d'un animal comme une
+                                sortie de première nécessité ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-light text-center mt-3">
+                    <div class="card-header">
+                        Recommandations pour vous
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

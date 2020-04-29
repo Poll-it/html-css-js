@@ -101,3 +101,24 @@ a.list-group-item {
 .popover-body {
     background-color: #222437!important;
 }
+
+.btn-primary:focus, .btn-primary.focus {
+    color: inherit!important;
+    background-color: #1c1e2f!important;
+    border-color: #1c1e2f!important;
+    box-shadow: none!important;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+    color: #fff;
+    background-color: #8862e0!important;
+    border-color: #8862e0!important;
+    box-shadow: none!important;
+}
+
+.custom-file-label {
+    color: #8862e0!important;
+    background-color: #1c1e2f!important;
+    border: #1c1e2f!important;
+}
+

@@ -18,7 +18,7 @@ a {
 }
 
 textarea {
-    resize: none;
+    resize: none!important;
 }
 
 .has-search .form-control {

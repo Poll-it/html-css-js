@@ -122,3 +122,6 @@ a.list-group-item {
     border: #1c1e2f!important;
 }
 
+.likeEvent, .shareEvent {
+    cursor: pointer;
+}

@@ -13,11 +13,14 @@
     <body class="bg-primary">
         <div class="container mt-5">
             <div class="row bg-dark">
-                <div class="col-md m-5">
-                    <img src="//placehold.it/400" class="img-fluid " alt="Logo">
+                <div class="col-md m-5 embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xQY4TftXMyA" allowfullscreen></iframe>
                 </div>
                 <div class="col-md m-5">
                     <form>
+                        <div class="alert alert-secondary" id="successRegister" role="alert" style="display: none;">
+                            Merci pour votre inscription ! Vous pouvez dès à présent vous connecter.
+                        </div>
                         <div class="form-group">
                             <label for="nickname" class="text-light">Nom d'utilisateur</label>
                             <div class="input-group mb-2">
@@ -31,9 +34,70 @@
                             <label for="password" class="text-light">Mot de passe</label>
                             <input type="password" class="form-control bg-primary text-light" id="password" placeholder="Mot de passe">
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-block btn-secondary">Se connecter</button>
-                            <p class="text-light">Vous n'avez pas de compte? <a href="register.php" class="text-secondary">Inscrivez-vous!</a></p>
+                        <div class="form-row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-block btn-secondary">Se connecter</button>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-block btn-secondary" data-toggle="modal" data-target="#registerModal">S'inscrire</button>
+                            </div>
+                            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content bg-dark text-light">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="registerModalLabel">Inscription</h5>
+                                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <label class="pl-1" for="firstName">Prénom *</label>
+                                                        <input type="text" class="form-control bg-primary text-light" id="firstName" placeholder="Sarah">
+                                                    </div>
+                                                    <div class="col">
+                                                        <label class="pl-1" for="lastName">Nom *</label>
+                                                        <input type="text" class="form-control bg-primary text-light" id="lastName" placeholder="Fortune">
+                                                    </div>
+                                                </div>
+                                                <label class="pl-1 mt-3" for="mail">Adresse mail *</label>
+                                                <input type="text" class="form-control bg-primary text-light" id="mail" placeholder="mail@gmail.com">
+                                                <label class="pl-1 mt-3" for="username">Nom d'utilisateur *</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text bg-primary text-light" id="tag">@</span>
+                                                    </div>
+                                                    <input type="text" class="form-control bg-primary text-light" id="username" placeholder="Sarah">
+                                                </div>
+                                                <div class="form-row mt-3">
+                                                    <div class="col">
+                                                        <label class="pl-1" for="firstName">Mot de passe *</label>
+                                                        <input type="password" class="form-control bg-primary text-light" id="firstName">
+                                                    </div>
+                                                    <div class="col">
+                                                        <label class="pl-1" for="lastName">Confirmation *</label>
+                                                        <input type="password" class="form-control bg-primary text-light" id="lastName">
+                                                    </div>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mt-3">
+                                                    <input type="checkbox" class="custom-control-input" id="condition1">
+                                                    <label class="custom-control-label" for="condition1">J'accepte les <a class="text-secondary" href="#">Conditions d'utilisations</a> *</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mt3">
+                                                    <input type="checkbox" class="custom-control-input" id="condition2">
+                                                    <label class="custom-control-label" for="condition2">Je confirme avoir <span class="text-secondary">plus de 16 ans</span> *</label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer text-left">
+                                            <button type="button" class="btn btn-block btn-secondary" id="successRegisterAccount" data-dismiss="modal">S'incrire</button>
+                                        </div>
+                                        <p class="ml-4 text-light text-left font-italic">Les champs marqués d'un astérisque sont obligatoires.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -44,27 +108,27 @@
             <div class="row mb-3">
                 <div class="col-md-4 mb-2">
                     <div class="card bg-dark text-light">
-                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="Découvrir">
+                        <img src="donnees/img/accueil/Decouvrir.svg" class="card-img-top" alt="Découvrir">
                         <div class="card-body">
-                            <h5 class="card-title">Découvrir</h5>
+                            <h5 class="card-title text-center">Découvrir</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque deleniti asperiores molestias eius. Similique iusto libero dolore eum hic unde, quasi in quibusdam modi officiis quisquam dignissimos repellat quas!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-2">
                     <div class="card bg-dark text-light">
-                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="Partager">
+                        <img src="donnees/img/accueil/Partager.svg" class="card-img-top" alt="Partager">
                         <div class="card-body">
-                            <h5 class="card-title">Partager</h5>
+                            <h5 class="card-title text-center">Partager</h5>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor molestiae quasi facere cum repudiandae accusantium qui, quos nobis, eaque architecto deserunt voluptas dolorem neque amet, laborum aut cumque recusandae ut.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-2">
                     <div class="card bg-dark text-light">
-                        <img src="donnees/img/accueil/decouvrir.jpg" class="card-img-top" alt="S'insipirer">
+                        <img src="donnees/img/accueil/S'inspirer.svg" class="card-img-top" alt="S'insipirer">
                         <div class="card-body">
-                            <h5 class="card-title">S'inspirer</h5>
+                            <h5 class="card-title text-center">S'inspirer</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel delectus ducimus rem voluptates perspiciatis ad beatae repudiandae et dignissimos molestias omnis cum quas adipisci voluptate veniam, accusantium perferendis odit soluta?</p>
                         </div>
                     </div>
@@ -86,6 +150,14 @@
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/app.js"></script>
+
+        <script>
+            $(function () {
+                $('#successRegisterAccount').on('click', function () {
+                    $('#successRegister').show();
+                })
+            })
+        </script>
     </body>
 
 </html>

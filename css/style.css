@@ -125,3 +125,11 @@ a.list-group-item {
 .likeEvent, .shareEvent {
     cursor: pointer;
 }
+
+.modal-footer {
+    text-align: left!important;
+}
+
+.modal-title {
+    text-align: center!important;
+}

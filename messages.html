@@ -1,383 +1,369 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pull it</title>
-        <link rel="stylesheet" href="css/fas.min.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/theme.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll it</title>
+    <link rel="stylesheet" href="css/fas.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.min.css">
+</head>
 
-    <body class="bg-primary">
-        <div class="container-fluid mt-5">
-            <div class="row mr-4 ml-4">
-                <div class="col-2">
-                    <ul class="card nav flex-column p-3 sticky-top bg-dark">
-                        <div class="align-self-center">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i> Notifications</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20" class="rounded-circle img-flui"/> Profil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
-                            </li>
-                        </div>
-                        <div class="text-center">
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                <label class="custom-control-label" for="customSwitch1"></label>
-                            </div>
-                        </div>
-                        <a class="text-center text-light" href="about.html">A propos</i></a>
-                        <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
-
-                    </ul>
+<body class="bg-primary">
+<div class="container-fluid mt-5">
+    <div class="row mr-4 ml-4">
+        <div class="col-2">
+            <ul class="card nav flex-column p-3 sticky-top bg-dark">
+                <div class="align-self-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                            Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
+                                                                                class="rounded-circle img-flui"/> Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
+                    </li>
                 </div>
+                <div class="text-center">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                </div>
+                <a class="text-center text-light" href="about.html">A propos</i></a>
+                <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
-                <div class="col-8">
+            </ul>
+        </div>
+
+        <div class="col-8">
+            <form autocomplete="off" method="POST" action="#">
+                <div class="form-group has-search">
+                    <span class="fas fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control bg-dark text-light"
+                           placeholder="Recherche quelqu'un ou quelque chose">
+                </div>
+            </form>
+            <div class="row m-0 bg-dark">
+                <div class="col-3">
+                    <div class="m-3 align-items-center">
+                        <img src="//placehold.it/60" class="rounded-circle"/>
+                        <a class="pl-2 text-light" href="#">@Karla</a>
+                    </div>
                     <form autocomplete="off" method="POST" action="#">
                         <div class="form-group has-search">
                             <span class="fas fa-search form-control-feedback"></span>
-                            <input type="text" class="form-control bg-dark text-light" placeholder="Recherche quelqu'un ou quelque chose">
+                            <input type="text" class="form-control bg-primary text-light" placeholder="Recherche">
                         </div>
                     </form>
-                    <div class="row m-0 bg-dark">
-                        <div class="col-3">
-                            <div class="m-3 align-items-center">
-                                <img src="//placehold.it/60" class="rounded-circle"/>
-                                <a class="pl-2 text-light" href="#">@Karla</a>
-                            </div>
-                            <form autocomplete="off" method="POST" action="#">
-                                <div class="form-group has-search">
-                                    <span class="fas fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control bg-primary text-light" placeholder="Recherche">
+                    <hr>
+                    <div class="container-scroll">
+                        <div class="list-group" id="list" role="tablist">
+                            <a class="list-group-item list-group-item-action bg-dark text-light active"
+                               data-toggle="list" href="#list-1" role="tab">
+                                <div class="align-items-center">
+                                    <img src="//placehold.it/40" class="rounded-circle pl-1"/>
+                                    <span class="pl-3">Karla</span>
                                 </div>
-                            </form>
-                            <hr>
-                            <div class="container-scroll">
-                                <div class="list-group" id="list" role="tablist">
-                                    <a class="list-group-item list-group-item-action bg-dark text-light active" data-toggle="list" href="#list-1" role="tab">
-                                        <div class="align-items-center">
-                                            <img src="//placehold.it/40" class="rounded-circle pl-1"/>
-                                            <span class="pl-3">Karla</span>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list" href="#list-2" role="tab">
-                                        <div class="align-items-center">
-                                            <img src="//placehold.it/40" class="rounded-circle pl-1"/>
-                                            <span class="pl-3">Karla</span>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list" href="#list-3" role="tab">
-                                        <div class="align-items-center">
-                                            <img src="//placehold.it/40" class="rounded-circle pl-1"/>
-                                            <span class="pl-3">Karla</span>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list" href="#list-4" role="tab">
-                                        <div class="align-items-center">
-                                            <img src="//placehold.it/40" class="rounded-circle pl-1"/>
-                                            <span class="pl-3">Karla</span>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list" href="#list-5" role="tab">
-                                        <div class="align-items-center">
-                                            <img src="//placehold.it/40" class="rounded-circle pl-1"/>
-                                            <span class="pl-3">Karla</span>
-                                        </div>
-                                    </a>
+                            </a>
+                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                               href="#list-2" role="tab">
+                                <div class="align-items-center">
+                                    <img src="//placehold.it/40" class="rounded-circle pl-1"/>
+                                    <span class="pl-3">Karla</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-9">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active text-light" id="list-1" role="tabpanel">
-                                    <div class="m-3 row justify-content-between align-items-center">
-                                        <div>
-                                            <img src="//placehold.it/50" class="rounded-circle"/>
-                                            <a class="pl-2 text-light" href="#">Karla</a>
-                                        </div>
-                                        <div>
-                                            <a class="btn btn-primary align-self-right" href="#"><i class="fas fa-trash-alt text-light"></i></a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="container-scroll pl-5">
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                               href="#list-3" role="tab">
+                                <div class="align-items-center">
+                                    <img src="//placehold.it/40" class="rounded-circle pl-1"/>
+                                    <span class="pl-3">Karla</span>
                                 </div>
-                                <div class="tab-pane fade text-light" id="list-2" role="tabpanel">
-                                    <div class="m-3 row justify-content-between align-items-center">
-                                        <div>
-                                            <img src="//placehold.it/50" class="rounded-circle"/>
-                                            <a class="pl-2 text-light" href="#">Karla</a>
-                                        </div>
-                                        <div>
-                                            <a class="btn btn-primary align-self-right" href="#"><i class="fas fa-trash-alt text-light"></i></a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="container-scroll pl-5">
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-                                    </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                               href="#list-4" role="tab">
+                                <div class="align-items-center">
+                                    <img src="//placehold.it/40" class="rounded-circle pl-1"/>
+                                    <span class="pl-3">Karla</span>
                                 </div>
-                                <div class="tab-pane fade text-light" id="list-3" role="tabpanel">
-                                    <div class="m-3 row justify-content-between align-items-center">
-                                        <div>
-                                            <img src="//placehold.it/50" class="rounded-circle"/>
-                                            <a class="pl-2 text-light" href="#">Karla</a>
-                                        </div>
-                                        <div>
-                                            <a class="btn btn-primary align-self-right" href="#"><i class="fas fa-trash-alt text-light"></i></a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="container-scroll pl-5">
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                               href="#list-5" role="tab">
+                                <div class="align-items-center">
+                                    <img src="//placehold.it/40" class="rounded-circle pl-1"/>
+                                    <span class="pl-3">Karla</span>
                                 </div>
-                                <div class="tab-pane fade text-light" id="list-4" role="tabpanel">
-                                    <div class="m-3 row justify-content-between align-items-center">
-                                        <div>
-                                            <img src="//placehold.it/50" class="rounded-circle"/>
-                                            <a class="pl-2 text-light" href="#">Karla</a>
-                                        </div>
-                                        <div>
-                                            <a class="btn btn-primary align-self-right" href="#"><i class="fas fa-trash-alt text-light"></i></a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="container-scroll pl-5">
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Donec lacinia congue felis in faucibus. In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade text-light" id="list-5" role="tabpanel">
-                                    <div class="m-3 row justify-content-between align-items-center">
-                                        <div>
-                                            <img src="//placehold.it/50" class="rounded-circle"/>
-                                            <a class="pl-2 text-light" href="#">Karla</a>
-                                        </div>
-                                        <div>
-                                            <a class="btn btn-primary align-self-right" href="#"><i class="fas fa-trash-alt text-light"></i></a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="container-scroll pl-5">
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3" alt="image">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-
-                                        <div class="media size-message">
-                                            <div class="media-body text-light">
-                                                <p class="rounded bg-primary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                            </div>
-                                            <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row m-3 d-flex justify-content-start">
-                                    <div class="align-self-start mr-2">
-                                        <a class="btn btn-primary text-light" href="#"><i class="fas fa-smile"></i></a>
-                                        <a class="btn btn-primary text-light" href="#"><i class="fas fa-paperclip"></i></a>
-                                    </div>
-                                    <div class="flex-fill">
-                                        <form autocomplete="off" method="POST" action="#">
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control bg-primary text-light" placeholder="Tape ton message">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-secondary" type="submit">Envoyer</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-2">
-                    <div class="sticky-top">
-                        <div class="card bg-dark text-light text-center">
-                            <div class="card-header">
-                                Suggestions pour vous
+                <div class="col-9">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active text-light" id="list-1" role="tabpanel">
+                            <div class="m-3 row justify-content-between align-items-center">
+                                <div>
+                                    <img src="//placehold.it/50" class="rounded-circle"/>
+                                    <a class="pl-2 text-light" href="#">Karla</a>
+                                </div>
+                                <div>
+                                    <a class="btn btn-primary align-self-right" href="#"><i
+                                            class="fas fa-trash-alt text-light"></i></a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <p>
-                                    <a class="card-text text-light" href="#">Les Français respectent-ils assez le confinement ?</a>
-                                </p>
-                                <hr>
-                                <p>
-                                    <a class="card-text text-light" href="#">Considérez-vous l'adoption d'un animal comme une sortie de première nécessité ?</a>
-                                </p>
-                                <hr>
-                                <p>
-                                    <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
-                                </p>
-                                <hr>
-                                <p>
-                                    <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col-8">
-                                        <a class="btn btn-block btn-secondary">Voir plus</a>
+                            <hr>
+                            <div class="container-scroll pl-5">
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
+                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
+                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                            Donec lacinia congue felis in faucibus.</p>
                                     </div>
-                                    <div class="col"></div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
+                                            gravida nulla.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card bg-dark text-light text-center mt-3">
-                            <div class="card-header">
-                                Recommandations pour vous
-                            </div>
-                            <div class="card-body">
+                        <div class="tab-pane fade text-light" id="list-2" role="tabpanel">
+                            <div class="m-3 row justify-content-between align-items-center">
                                 <div>
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light ml-2" href="#">@Karla</a>
-                                    <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                                    <img src="//placehold.it/50" class="rounded-circle"/>
+                                    <a class="pl-2 text-light" href="#">Karla</a>
                                 </div>
-                                <hr>
                                 <div>
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light ml-2" href="#">@Karla</a>
-                                    <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
-                                </div>
-                                <hr>
-                                <div>
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light ml-2" href="#">@Karla</a>
-                                    <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
-                                </div>
-                                <hr>
-                                <div>
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light ml-2" href="#">@Karla</a>
-                                    <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                                    <a class="btn btn-primary align-self-right" href="#"><i
+                                            class="fas fa-trash-alt text-light"></i></a>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col-8">
-                                        <a class="btn btn-block btn-secondary">Voir plus</a>
+                            <hr>
+                            <div class="container-scroll pl-5">
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
                                     </div>
-                                    <div class="col"></div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
                                 </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade text-light" id="list-3" role="tabpanel">
+                            <div class="m-3 row justify-content-between align-items-center">
+                                <div>
+                                    <img src="//placehold.it/50" class="rounded-circle"/>
+                                    <a class="pl-2 text-light" href="#">Karla</a>
+                                </div>
+                                <div>
+                                    <a class="btn btn-primary align-self-right" href="#"><i
+                                            class="fas fa-trash-alt text-light"></i></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container-scroll pl-5">
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
+                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
+                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                            Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
+                                            gravida nulla.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade text-light" id="list-4" role="tabpanel">
+                            <div class="m-3 row justify-content-between align-items-center">
+                                <div>
+                                    <img src="//placehold.it/50" class="rounded-circle"/>
+                                    <a class="pl-2 text-light" href="#">Karla</a>
+                                </div>
+                                <div>
+                                    <a class="btn btn-primary align-self-right" href="#"><i
+                                            class="fas fa-trash-alt text-light"></i></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container-scroll pl-5">
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
+                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
+                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                            Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
+                                            gravida nulla.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus. Donec lacinia
+                                            congue felis in faucibus. In gravida nulla. Nulla vel metus scelerisque ante
+                                            sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                            turpis.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade text-light" id="list-5" role="tabpanel">
+                            <div class="m-3 row justify-content-between align-items-center">
+                                <div>
+                                    <img src="//placehold.it/50" class="rounded-circle"/>
+                                    <a class="pl-2 text-light" href="#">Karla</a>
+                                </div>
+                                <div>
+                                    <a class="btn btn-primary align-self-right" href="#"><i
+                                            class="fas fa-trash-alt text-light"></i></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container-scroll pl-5">
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
+                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
+                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                            Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+
+                                <div class="media size-message">
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start mr-3"
+                                         alt="image">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
+                                            gravida nulla.</p>
+                                    </div>
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+
+                                <div class="media size-message">
+                                    <div class="media-body text-light">
+                                        <p class="rounded bg-primary p-3 text-justify">Vestibulum in vulputate at,
+                                            tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in
+                                            vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.
+                                            Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue
+                                            felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec
+                                            lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra
+                                            turpis. Donec lacinia congue felis in faucibus.</p>
+                                    </div>
+                                    <img src="//placehold.it/50" class="rounded-circle align-self-start ml-3"
+                                         alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row m-3 d-flex justify-content-start">
+                            <div class="align-self-start mr-2">
+                                <a class="btn btn-primary text-light" href="#"><i class="fas fa-smile"></i></a>
+                                <a class="btn btn-primary text-light" href="#"><i class="fas fa-paperclip"></i></a>
+                            </div>
+                            <div class="flex-fill">
+                                <form autocomplete="off" method="POST" action="#">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control bg-primary text-light"
+                                               placeholder="Tape ton message">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-secondary" type="submit">Envoyer</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -385,7 +371,86 @@
             </div>
         </div>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-    </body>
+        <div class="col-2">
+            <div class="sticky-top">
+                <div class="card bg-dark text-light text-center">
+                    <div class="card-header">
+                        Suggestions pour vous
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <a class="card-text text-light" href="#">Les Français respectent-ils assez le confinement
+                                ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Considérez-vous l'adoption d'un animal comme une
+                                sortie de première nécessité ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-light text-center mt-3">
+                    <div class="card-header">
+                        Recommandations pour vous
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <img src="//placehold.it/40" class="rounded-circle"/>
+                            <a class="text-light ml-2" href="#">@Karla</a>
+                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

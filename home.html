@@ -44,6 +44,8 @@
                 <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
             </ul>
+
+
         </div>
 
         <div class="col-8">
@@ -68,13 +70,49 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-9">
-
                         </div>
                         <div class="col">
                             <a class="btn btn-primary text-light" href="#"><i class="fas fa-smile"></i></a>
-                            <input class="btn-input btn btn-primary text-light" type="file">
-                            <a class="btn btn-primary text-light ml-3" href="#"><i class="fas fa-plus"></i></a>
+                            <span class="btn btn-primary btn-file text-light">
+                                <i class="fas fa-link"></i><input type="file">
+                            </span>
+                            <a class="btn btn-primary text-light ml-3" data-toggle="modal" data-target="#btn-file"><i
+                                    class="fas fa-plus"></i></a>
                             <button class="btn btn-secondary ml-3" type="submit">Envoyer</button>
+                        </div>
+                        <div class="modal fade" id="btn-file" tabindex="-1" role="dialog" aria-labelledby="modalFile"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalFile">Quels choix pour votre sondage ?</h5>
+                                        <button type="button" class="close text-light" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form m-3">
+                                            <div class="row align-items-end">
+                                                <label class="pl-1" for="choice1">Choix 1</label>
+                                                <input type="text" class="mt-2 form-control bg-primary text-light"
+                                                       id="choice1" placeholder="Oui">
+                                                <label class="pl-1 mt-3" for="choice2">Choix 2</label>
+                                                <input type="text" class="mt-2 form-control bg-primary text-light"
+                                                       id="choice2" placeholder="Non">
+                                                <label class="pl-1 mt-3" for="choice3">Choix 3</label>
+                                                <input type="text" class="mt-2 form-control bg-primary text-light"
+                                                       id="choice3" placeholder="Autre">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Envoyer
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

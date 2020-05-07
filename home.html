@@ -11,9 +11,36 @@
 </head>
 
 <body class="bg-primary">
+    <div class="d-block d-lg-none">
+        <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="home.html"><i class="fas fa-2x fa-home"></i> <span class="d-none d-md-block">Accueil</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="notifications.html"><i class="fas fa-2x fa-lightbulb"></i>
+                    <span class="d-none d-md-block">Notifications</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="messages.html"><i class="fas fa-2x fa-comments"></i> <span class="d-none d-md-block">Messages</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
+                        class="rounded-circle img-flui"/> <span class="d-none d-md-block">Profil</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="settings.html"><i class="fas fa-2x fa-cog"></i> <span class="d-none d-md-block">Réglages</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="about.html"><i class="fas fa-2x fa-cog"></i> <span class="d-none d-md-block">A propos</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="index.html"><i class="fas fa-2x fa-sign-out-alt"></i> <span class="d-none d-md-block">Déconnexion</span></a>
+            </li>
+        </nav>
+    </div>
 <div class="container-fluid mt-5">
-    <div class="row mr-4 ml-4">
-        <div class="col-2">
+    <div class="row mx-lg-4">
+        <div class="col-lg-2 d-none d-lg-block">
             <ul class="card nav flex-column p-3 sticky-top bg-dark">
                 <div class="align-self-center">
                     <li class="nav-item">
@@ -48,7 +75,7 @@
 
         </div>
 
-        <div class="col-8">
+        <div class="col-lg-10 col-xl-8">
             <form autocomplete="off" method="POST" action="#">
                 <div class="form-group has-search">
                     <span class="fas fa-search form-control-feedback"></span>
@@ -208,7 +235,7 @@
             </div>
         </div>
 
-        <div class="col-2">
+        <div class="col-xl-2 d-none d-xl-block">
             <div class="sticky-top">
                 <div class="card bg-dark text-light text-center">
                     <div class="card-header">

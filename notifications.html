@@ -55,63 +55,90 @@
                 </div>
             </form>
 
-            <ul class="list-group">
-                <li class="mb-2 bg-dark text-primary list-group-item">
-                    <a href="#">
-                        <div class="row align-middle">
-                            <div class="ml-2">
-                                <img src="//placehold.it/50" class="rounded-circle"/>
-                            </div>
-                            <div class="pl-3">
-                                <p class="m-0 text-light">Karla a aimé votre sondage</p>
-                                <p class="m-0 text-light">Il y a 2 min</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+            <div class="bg-dark">
+                <ul class="nav nav-pills nav-fill mb-3 justify-content-around" id="notifTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" id="pills-notif-tab" data-toggle="pill"
+                           href="#pills-notif" role="tab" aria-controls="pills-notif"
+                           aria-selected="true">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="pills-suggest-tab" data-toggle="pill"
+                           href="#pills-suggest" role="tab" aria-controls="pills-suggest" aria-selected="false">Suggestions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="pills-recommandation-tab" data-toggle="pill"
+                           href="#pills-recommandation" role="tab" aria-controls="pills-recommandation" aria-selected="false">Recommandations</a>
+                    </li>
+                </ul>
+            </div>
 
-                <li class="mb-2 bg-dark list-group-item">
-                    <a href="#">
-                        <div class="row align-middle">
-                            <div class="ml-2">
-                                <img src="//placehold.it/50" class="rounded-circle"/>
-                            </div>
-                            <div class="pl-3">
-                                <p class="m-0 text-light">Karla a aimé votre sondage</p>
-                                <p class="m-0 text-light">Il y a 2 min</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-notif" role="tabpanel" aria-labelledby="pills-notif-tab">
+                    <ul class="list-group">
+                        <li class="mb-2 bg-dark text-primary list-group-item">
+                            <a href="#">
+                                <div class="row align-middle">
+                                    <div class="ml-2">
+                                        <img src="//placehold.it/50" class="rounded-circle"/>
+                                    </div>
+                                    <div class="pl-3">
+                                        <p class="m-0 text-light">Karla a aimé votre sondage</p>
+                                        <p class="m-0 text-light">Il y a 2 min</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-                <li class="mb-2 bg-dark list-group-item">
-                    <a href="#">
-                        <div class="row align-middle">
-                            <div class="ml-2">
-                                <img src="//placehold.it/50" class="rounded-circle"/>
-                            </div>
-                            <div class="pl-3">
-                                <p class="m-0 text-light">Karla a aimé votre sondage</p>
-                                <p class="m-0 text-light">Il y a 2 min</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                        <li class="mb-2 bg-dark list-group-item">
+                            <a href="#">
+                                <div class="row align-middle">
+                                    <div class="ml-2">
+                                        <img src="//placehold.it/50" class="rounded-circle"/>
+                                    </div>
+                                    <div class="pl-3">
+                                        <p class="m-0 text-light">Karla a aimé votre sondage</p>
+                                        <p class="m-0 text-light">Il y a 2 min</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-                <li class="mb-2 bg-dark list-group-item">
-                    <a href="#">
-                        <div class="row align-middle">
-                            <div class="ml-2">
-                                <img src="//placehold.it/50" class="rounded-circle"/>
-                            </div>
-                            <div class="pl-3">
-                                <p class="m-0 text-light">Karla a aimé votre sondage</p>
-                                <p class="m-0 text-light">Il y a 2 min</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+                        <li class="mb-2 bg-dark list-group-item">
+                            <a href="#">
+                                <div class="row align-middle">
+                                    <div class="ml-2">
+                                        <img src="//placehold.it/50" class="rounded-circle"/>
+                                    </div>
+                                    <div class="pl-3">
+                                        <p class="m-0 text-light">Karla a aimé votre sondage</p>
+                                        <p class="m-0 text-light">Il y a 2 min</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="mb-2 bg-dark list-group-item">
+                            <a href="#">
+                                <div class="row align-middle">
+                                    <div class="ml-2">
+                                        <img src="//placehold.it/50" class="rounded-circle"/>
+                                    </div>
+                                    <div class="pl-3">
+                                        <p class="m-0 text-light">Karla a aimé votre sondage</p>
+                                        <p class="m-0 text-light">Il y a 2 min</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="pills-suggest" role="tabpanel" aria-labelledby="pills-suggest-tab">...</div>
+                <div class="tab-pane fade" id="pills-recommandation" role="tabpanel" aria-labelledby="pills-recommandation-tab">...</div>
+            </div>
+
+
+
         </div>
 
         <div class="col-2">
@@ -143,7 +170,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col-8">
-                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
                             </div>
                             <div class="col"></div>
                         </div>
@@ -182,7 +209,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col-8">
-                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
                             </div>
                             <div class="col"></div>
                         </div>

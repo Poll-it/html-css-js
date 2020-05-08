@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll it</title>
+    <link rel="stylesheet" href="css/fas.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.min.css">
+</head>
+<body class="bg-primary">
+<div class="container-fluid mt-5">
+    <div class="row mr-4 ml-4">
+        <div class="col-2">
+            <ul class="card nav flex-column p-3 sticky-top bg-dark">
+                <div class="align-self-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                            Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
+                                                                                class="rounded-circle img-flui"/> Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
+                    </li>
+                </div>
+                <div class="text-center">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                </div>
+                <a class="text-center text-light" href="about.html">A propos</i></a>
+                <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
+
+            </ul>
+        </div>
+        <div class="col-10 mb-2 text-center">
+            <div class="accordion" id="accordionAbout">
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="who">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                Qui sommes-nous ?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse1" class="collapse" aria-labelledby="who"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify">
+                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
+                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
+                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
+                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
+                            quant à elles, sont designées par la plateforme Freepik.
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="credit">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                Crédits
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse2" class="collapse" aria-labelledby="credit"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify">
+                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
+                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
+                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
+                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
+                            quant à elles, sont designées par la plateforme Freepik.
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="stratCom">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                Stratégie de communication
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse3" class="collapse" aria-labelledby="stratCom"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify m-3">
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 1 : L'IDENTITE NUMERIQUE</h6>
+                            <p>Nous avons fait le choix de décliner notre identité numérique sur le site par le biais
+                                d’une page “À propos”, située au bas de notre barre de navigation. Le but est qu’elle
+                                soit visible aux yeux de tous les internautes pour leur permettre d’interagir avec le
+                                site ou de s’informer. Pour ce faire, nous avons choisi de découper cette page en
+                                plusieurs zones :</p>
+                            <p>Dans un premier temps, la zone “Qui sommes nous ?”. Le but de cette zone est de nous
+                                présenter en tant que concepteurs du site et d’expliquer nos choix de productions qu’il
+                                s’agisse du thème du site, de son but, de ce que nous souhaitons apporter à
+                                l’internaute, de nos idées ou de nos valeurs.
+                            </p>
+                            <p>Ensuite, une zone “Crédit”. Le but de cette zone est d'expliciter les technologies que
+                                nous avons utilisé pour mener à bien notre projet, en passant des langages de
+                                développement web aux libraires open sources.</p>
+                            <p>Après, une zone “Conditions Générales d’Utilisation”. Le but de cette zone est d’établir
+                                un contrat entre le site et ses utilisateurs. Ce contrat est alors soumis à
+                                l’utilisateur au cours de son inscription, il doit valider sa lecture pour accéder au
+                                reste du site. Cette CGU n’était pas obligatoirement demandée mais nous souhaitions nous
+                                confronter au problème car tout site en possède une, et tout site se doit d’avoir ses
+                                restrictions, droits et devoirs juridiques envers un utilisateur et inversement. Nous
+                                trouvions que cet aspect ajoutait un peu de plus value et d'authenticité à notre site.
+                            </p>
+                            <p>De la même manière, une zone “Politique de Confidentialité”. Le but de cette zone est
+                                d’être transparent avec l'utilisateur et le traitement que nous faisons de ses données.
+                                Dans la mesure où l’internaute doit d’inscrire pour accéder au reste du site, il donne
+                                alors des informations confidentielles sur son identité. Il existe beaucoup de lois à ce
+                                sujet et nous souhaitions nous mesurer à ce problème car nous sommes nous aussi
+                                confronté à l’utilisation et gestion de nos données personnelles.</p>
+                            <p>Puis, une zone “Charte Graphique”. Le but de cette zone est d’expliquer nos choix en
+                                terme de couleur, police d’écriture, ergonomie, qui représentent, eux aussi, notre
+                                identité sur le site.</p>
+                            <p>In fine, une zone “Assistance”. Le but de cette zone est de permettre à l'utilisateur
+                                d’interagir avec les concepteurs du site et de faire remonter un problème, une question
+                                ou autre.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 2 : LA CIBLE WEB ET SA
+                                PARTICIPATION</h6>
+                            <p>Notre site web est sous la forme d’un réseau social. Il est à la disposition de tous,
+                                nous ne faisons aucune distinction genrée ou ethnique. La seule limite que nous imposons
+                                est celle de l'âge, où nous limitons l’âge légal d’inscription à 15 ans en raison de la
+                                loi COPPA aux USA, de la RGPD et de l’interdiction de collecter les données des
+                                enfants.</p>
+                            <p>Notre cible principale reste néanmoins les jeunes adultes et adultes car elle semble la
+                                plus susceptible à s’intéresser au contenu que nous proposons. </p>
+                            <p>Notre réseau social se veut innovant, nous avons comme objectif premier d'apporter de la
+                                nouveauté sur le marché à la fois du réseau social mais aussi de la création de sondage.
+                                Nous favorisons la réflexion de nos internautes ainsi que leur liberté d’expression et
+                                de penser.</p>
+                            <p>Nous souhaitons développer la notion de divertissement auprès de nos internautes. En
+                                effet, ces derniers décident librement d’interagir avec notre réseau social, nous
+                                souhaitons donc qu’ils puissent s’y épanouir en leur proposant du contenu adapté à leurs
+                                besoins et centres d'intérêts. Par exemple : des sondages sur la politique, ou des
+                                sondages sur la culture.
+                            </p>
+                            <p>Ensuite, nous souhaitons développer la capacité de l’utilisateur à échanger avec autrui
+                                et à accroître son ouverture d’esprit. De ce fait, les internautes auront la possibilité
+                                de créer les sondages qu’ils souhaitent et d’échanger leurs différents points de vue
+                                dans un espace commentaire. Ce dernier permettra seulement une réaction en rapport avec
+                                le thème du sondage. Tout message considéré comme “flood” sera immédiatement supprimé.
+                                Nous avons fait le choix, pour compenser cette partie, de créer une partie message
+                                privé, qui permettra aux internautes d'interagir librement entre eux, sur n’importe quel
+                                sujet.
+                            </p>
+                            <p>Chaque poste de sondage disposera de boutons qui permettront à l’utilisateur d’interagir
+                                avec : pour aimer, pour partager sur son profil, pour partager avec un lien, pour
+                                partager sur facebook ou twitter ou pour envoyer à un autre internaute en message privé.
+                                De la même manière, les utilisateurs pourront masquer un sondage de leur fil d’actualité
+                                ou le signaler s’ils jugent son contenu indésirable. L’utilisateur pourra aussi faire
+                                les recherches qu’il souhaite pour accéder à un certain type de contenu. Il aura aussi
+                                la possibilité de découvrir des sondages populaires ou d’autres d’utilisateurs.</p>
+                            <p>Nous souhaitons favoriser la liberté d’expression et de penser, c’est pourquoi il n’y
+                                aura pas de censure quant aux sujets que les utilisateurs souhaiteront aborder dans
+                                leurs sondages. Cependant, tout message diffamant, injurieux, dénigrant, toute
+                                incitation à la haine raciale, au sexisme, l'homophobie ou ne respectant pas la loi
+                                française seront supprimés et sanctionnés.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 3 : LE CONTENU EDITORIAL</h6>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 4 : LA REPUTATION VIRTUELLE</h6>
+                            <p>Pour optimiser au maximum notre présence sur le web, nous avons établi une liste de
+                                principaux mots-clés qui permettront à notre site d’être bien référencé. Cette liste
+                                contient les mots suivants : Pool it, sondage, créer, participer, opinion, public,
+                                social, échance, communication, expression, liberté, enquête, réaction.</p>
+                            <p>Nous avons également choisis d’être présent sur les réseaux sociaux suivants : Facebook,
+                                Twitter et Instagram. Nous y posterons l’actualité liée à notre site telle que des mises
+                                à jour ou de nouvelles fonctionnalité. Ils serviront principalement à promouvoir notre
+                                site.
+                            </p>
+                            <p>Les internautes auront la possibilité de recevoir des enquêtes par mail et d’y participer
+                                dans le but de noter le site, d’en donner leurs avis et d’explorer des axes
+                                d’amélioration.
+                            </p>
+                            <p>Nous ferons en sorte que notre site soit adapté à tous les écrans (responsive design), ce
+                                qui permettra à la fois d’être mieux référencé (en effet les gros moteurs de recherches
+                                prennent en compte la responsivité) mais aussi d’être accessible à n’importe quel moment
+                                et sur n’importe quel appareil pour les internautes.
+                            </p>
+                            <p>De la même manière, nous validerons notre site sur le W3C, ce qui améliorera son
+                                référencement et réduira au maximum les erreurs liés à sa programmation. Nous pourrons
+                                également utiliser des sites tels que analytic.google.com pour analyser le nombre de
+                                visite sur notre site depuis les moteurs de recherche, le nombre de lien cliqué, le
+                                temps passé sur le site web, sa performance et rapidité en ligne, dans le but de définir
+                                ensuite des axes d’amélioration.
+                            </p>
+                            <p>A terme, nous souhaitons être le plus accessible possible sur l’ensemble des navigateurs
+                                web et surtout DuckDuckGo et Ecosia avec lesquels nous partageons les valeurs de non
+                                collecte des données.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="cgu">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                Conditions Générales d'Utilisations
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse4" class="collapse" aria-labelledby="cgu"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify m-3">
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 1 : Objet</h6>
+                            <p>Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement
+                                juridique de l’utilisation du site Poll It et de ses services.
+                            </p>
+                            <p>Ce contrat est conclu entre :</p>
+                            <p>Le gérant du site internet, ci-après désigné « l’Éditeur »,</p>
+                            <p>Toute personne physique ou morale souhaitant accéder au site et à ses services, ci-après
+                                appelé « l’Utilisateur ».</p>
+                            <p>Les conditions générales d'utilisation ainsi que la politique de confidentialité doivent
+                                être acceptées par tout Utilisateur, et son accès au site vaut acceptation de ces
+                                conditions.</p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 2 : Mentions légales</h6>
+                            <p>Pour les personnes morales :</p>
+                            <p>Le site Poll It est édité par la société Poll It, [SARL] au capital de 1€, dont le siège
+                                social est situé au 2 ter bd Charlemagne, 54 000, Nancy, France.</p>
+                            <p>La société est représentée par Evana Zeimeth et Lucie Laurent.
+                            </p>
+                            <p>Pour les personnes physiques :</p>
+                            <p>Le site Poll It est édité par Lucie Laurent et Evana Zeimeth, domicilié au 2 ter bd
+                                Charlemagne, 54 000, Nancy, France.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 3 : Accès aux services</h6>
+                            <p>L’Utilisateur du site Poll It a accès aux services suivants :
+                                • Mettre en ligne un sondage
+                                • Répondre à un sondage
+                                • Commenter un sondage
+                                • Partager un sondage
+                                • Utiliser une messagerie afin d'interagir de manière privé avec un autre utilisateur
+                            </p>
+                            <p>Ces services ne sont pas accessible pour l’Utilisateur que s’il est membre du site
+                                (c’est-à-dire qu’ile st identifié à l’aide de ses identifiants de connexion).
+                            </p>
+                            <p>Tout Utilisateur ayant accès à internet peut accéder gratuitement et depuis n’importe où
+                                au site. Les frais supportés par l’Utilisateur pour y accéder (connexion internet,
+                                matériel informatique, etc.) ne sont pas à la charge de l’Éditeur.</p>
+                            <p>Le site et ses différents services peuvent être interrompus ou suspendus par l’Éditeur,
+                                notamment à l’occasion d’une maintenance, sans obligation de préavis ou de
+                                justification.</p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 4 : Responsabilité de
+                                l’Utilisateur</h6>
+                            <p>L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de
+                                connexion et de son mot de passe.</p>
+                            <p>Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de
+                                passe, l’Éditeur décline toute responsabilité.
+                            </p>
+                            <p>L’Utilisateur assume l’entière responsabilité de l’utilisation qu’il fait des
+                                informations et contenus présents sur le site Poll It.
+                            </p>
+                            <p>Tout usage du service par l'Utilisateur ayant directement ou indirectement pour
+                                conséquence des dommages doit faire l'objet d'une indemnisation au profit du site.
+                            </p>
+                            <p>Le site permet aux membres de publier sur le site :
+                                • Des Sondages ;
+                                • Des commentaires ;
+                                • Des photographies.
+                            </p>
+                            <p>Le membre s’engage à tenir des propos respectueux des autres et de la loi et accepte que
+                                ces publications soient modérées ou refusées par l’Éditeur, sans obligation de
+                                justification.</p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 5 : Responsabilité de l’Éditeur</h6>
+                            <p>Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de
+                                l’Éditeur.
+                            </p>
+                            <p>De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du
+                                fait imprévisible et insurmontable d'un tiers.
+                            </p>
+                            <p>Le site Poll It s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la
+                                sécurité et la confidentialité des données. Toutefois, il n’apporte pas une garantie de
+                                sécurité totale.
+                            </p>
+                            <p>L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que
+                                les informations diffusées sur le site soient réputées fiables.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 6 : Propriété intellectuelle</h6>
+                            <p>Les contenus du site Poll It (logos, textes, éléments graphiques, vidéos, etc.) sont
+                                protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle.
+                            </p>
+                            <p>L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction,
+                                copie ou publication de ces différents contenus.
+                            </p>
+                            <p>Ces derniers peuvent être utilisés par les utilisateurs à des fins privées ; tout usage
+                                commercial est interdit.
+                            </p>
+                            <p>L’Utilisateur est entièrement responsable de tout contenu qu’il met en ligne et il
+                                s’engage à ne pas porter atteinte à un tiers.
+                            </p>
+                            <p>L’Éditeur du site se réserve le droit de modérer ou de supprimer librement et à tout
+                                moment les contenus mis en ligne par les utilisateurs, et ce sans justification.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 7 : Données personnelles</h6>
+                            <p>L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à
+                                son inscription sur le site.
+                            </p>
+                            <p>L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le
+                                site Poll It pour la communication d’informations diverses et la gestion du compte.
+                            </p>
+                            <p>Poll It garantie le respect de la vie privée de l’utilisateur, conformément à la loi
+                                n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
+                            </p>
+                            <p>En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateur dispose
+                                d'un droit d'accès, de rectification, de suppression et d'opposition de ses données
+                                personnelles.</p>
+                            <p>L'Utilisateur exerce ce droit via :
+                                • Son espace personnel sur le site ;
+                                • Un formulaire de contact ;
+                                • Par mail à poll-it@protonmail.com ;</p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 8 : Liens hypertextes</h6>
+                            <p>Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent
+                                pas la responsabilité de l’Éditeur de Poll It, qui n’a pas de contrôle sur ces liens.
+                            </p>
+                            <p>Il est possible pour un tiers de créer un lien vers une page du site Poll It sans
+                                autorisation expresse de l’éditeur.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 9 : Évolution des conditions générales
+                                d’utilisation</h6>
+                            <p>Le site Poll It se réserve le droit de modifier les clauses de ces conditions générales
+                                d’utilisation à tout moment et sans justification.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 10 : Durée du contrat</h6>
+                            <p>La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de
+                                l'Utilisateur à compter du début de l’utilisation du service.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 11 : Droit applicable et juridiction
+                                compétente</h6>
+                            <p>Le présent contrat dépend de la législation française.</p>
+                            <p>En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux
+                                de Nancy sont compétents pour régler le contentieux.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="politiqueConfidentialité">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                Politique de Confidentialité
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse5" class="collapse" aria-labelledby="politiqueConfidentialité"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify m-3">
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 1 : PRÉAMBULE</h6>
+                            <p>Cette politique de confidentialité s'applique au site : Poll It.
+                            </p>
+                            <p>La présente politique de confidentialité a pour but d'exposer aux utilisateurs du site :
+                            </p>
+                            <p class="pl-3">• La manière dont sont collectées et traitées leurs données à caractère
+                                personnel. Doivent être considérées comme données personnelles toutes les données étant
+                                susceptibles d'identifier un utilisateur. Il s'agit notamment du prénom et du nom, de
+                                l'âge, de l'adresse postale, l'adresse mail, la localisation de l'utilisateur ou encore
+                                son adresse IP ;</p>
+                            <p class="pl-3">• Quels sont les droits des utilisateurs concernant ces données ;</p>
+                            <p class="pl-3">• Qui est responsable du traitement des données à caractère personnel
+                                collectées et traitées ;</p>
+                            <p class="pl-3">• A qui ces données sont transmises ;</p>
+                            <p>Cette politique de confidentialité complète les Conditions Générales d'Utilisation.</p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 2 : PRINCIPES GÉNÉRAUX EN MATIÈRE DE
+                                COLLECTE ET DE TRAITEMENT DE DONNÉES
+                            </h6>
+                            <p>Conformément aux dispositions de l'article 5 du Règlement européen 2016/679, la collecte
+                                et le traitement des données des utilisateurs du site respectent les principes suivants
+                                :
+                            </p>
+                            <p class="pl-3">• Licéité, loyauté et transparence : les données ne peuvent être collectées
+                                et traitées qu'avec le consentement de l'utilisateur propriétaire des données. A chaque
+                                fois que des données à caractère personnel seront collectées, il sera indiqué à
+                                l'utilisateur que ses données sont collectées, et pour quelles raisons ses données sont
+                                collectées ;
+                            </p>
+                            <p class="pl-3">• Finalités limitées : la collecte et le traitement des données sont
+                                exécutés pour répondre à un ou plusieurs objectifs déterminés dans les présentes
+                                conditions générales d'utilisation ;
+                            </p>
+                            <p class="pl-3">• Minimisation de la collecte et du traitement des données : seules les
+                                données nécessaires à la bonne exécution des objectifs poursuivis par le site sont
+                                collectées ;
+                            </p>
+                            <p class="pl-3">• Conservation des données réduites dans le temps : les données sont
+                                conservées pour une durée limitée, dont l'utilisateur est informé. Lorsque cette
+                                information ne peut pas être communiquée, l'utilisateur est informé des critères
+                                utilisés pour déterminer la durée de conservation ;
+                            </p>
+                            <p class="pl-3">• Intégrité et confidentialité des données collectées et traitées : le
+                                responsable du traitement des données s'engage à garantir l'intégrité et la
+                                confidentialité des données collectées.
+                            </p>
+                            <p>Afin d'être licites, et ce conformément aux exigences de l'article 6 du règlement
+                                européen 2016/679, la collecte et le traitement des données à caractère personnel ne
+                                pourront intervenir que s'ils respectent au moins l'une des conditions ci-après
+                                énumérées :
+                            </p>
+                            <p class="pl-3">• L'utilisateur a expressément consenti au traitement ;
+                            </p>
+                            <p class="pl-3">• Le traitement est nécessaire à la bonne exécution d'un contrat ;
+                            </p>
+                            <p class="pl-3">• Le traitement répond à une obligation légale ;
+                            </p>
+                            <p class="pl-3">• Le traitement s'explique par une nécessité liée à la sauvegarde des
+                                intérêts vitaux de la personne concernée ou d'une autre personne physique ;
+                            </p>
+                            <p class="pl-3">• Le traitement peut s'expliquer par une nécessité liée à l'exécution d'une
+                                mission d'intérêt public ou qui relève de l'exercice de l'autorité publique ;
+                            </p>
+                            <p class="pl-3">• Le traitement et la collecte des données à caractère personnel sont
+                                nécessaires aux fins des intérêts légitimes et privés poursuivis par le responsable du
+                                traitement ou par un tiers.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 3 : DONNÉES À CARACTÈRE PERSONNEL
+                                COLLECTÉES ET TRAITÉES DANS LE CADRE DE LA NAVIGATION SUR LE SITE
+                            </h6>
+                            <p class="font-weight-bold my-5">A. DONNÉES COLLECTÉES ET TRAITÉES ET MODE DE COLLECTE
+                            </p>
+                            <p>Les données à caractère personnel collectées sur le site Poll It sont les suivantes :</p>
+                            <p class="pl-3">• Nom de l’utilisateur
+                            </p>
+                            <p class="pl-3">• Prénom de l’utilisateur
+                            </p>
+                            <p class="pl-3">• Adresse mail de l’utilisateur
+                            </p>
+                            <p>Ces données sont collectées lorsque l'utilisateur effectue l'opération suivante sur le
+                                site :</p>
+                            <p class="pl-3">• S’inscrire sur le site Poll it
+                            </p>
+                            <p>Le responsable du traitement conservera dans ses systèmes informatiques du site et dans
+                                des conditions raisonnables de sécurité l'ensemble des données collectées jusqu’à
+                                suppression du compte utilisateur. </p>
+                            <p>La collecte et le traitement des données répondent aux finalités suivantes :</p>
+                            <p>Les données de nom et prénom sont collectées afin de s’assurer qu’il s’agit bien d’une
+                                personne physique qui interagit avec le site.</p>
+                            <p class="font-weight-bold my-5">B. TRANSMISSION DES DONNÉES A DES TIERS
+                            </p>
+                            <p>Les données ne peuvent être transmises à des tiers.
+                            </p>
+                            <p class="font-weight-bold my-5">C. HÉBERGEMENT DES DONNÉES
+                            </p>
+                            <p>Le site Poll It est hébergé par : 1And1, dont le siège est situé à l'adresse ci-après :
+                            </p>
+                            <p class="pl-3">• Montabaur, Allemagne
+                            </p>
+                            <p>L'hébergeur peut être contacté au numéro de téléphone suivant : 0970 808 911
+                            </p>
+                            <p>Les données collectées et traitées par le site sont exclusivement hébergées et traitées
+                                en France.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 4 : RESPONSABLE DU TRAITEMENT DES
+                                DONNÉES ET DÉLÉGUÉ À LA PROTECTION DES DONNÉES
+                            </h6>
+                            <p class="font-weight-bold my-5">A. LE RESPONSABLE DU TRAITEMENT DES DONNÉES
+                            </p>
+                            <p>Le responsable du traitement des données à caractère personnel est : Evana Zeimeth et
+                                Lucie Laurent. Il peut être contacté de la manière suivante :
+                            </p>
+                            <p class="pl-3">• Au téléphone au 0648603918 et par email à l'adresse suivante :
+                                evana.zed@orange.fr du lundi au vendredi de 9h à 17h.
+                            </p>
+                            <p class="pl-3">• Au téléphone au 0770472638 et par email à l'adresse suivante :
+                                lucie.laurent@protonmail.fr du lundi au vendredi de 8h à 16h30.
+                            </p>
+                            <p>Le responsable du traitement des données est chargé de déterminer les finalités et les
+                                moyens mis au service du traitement des données à caractère personnel.
+                            </p>
+                            <p class="font-weight-bold my-5">B. OBLIGATIONS DU RESPONSABLE DU TRAITEMENT DES DONNÉES
+                            </p>
+                            <p>Le responsable du traitement s'engage à protéger les données à caractère personnel
+                                collectées, à ne pas les transmettre à des tiers sans que l'utilisateur n'en ait été
+                                informé et à respecter les finalités pour lesquelles ces données ont été collectées.
+                            </p>
+                            <p>Le site dispose d'un certificat SSL afin de garantir que les informations et le transfert
+                                des données transitant par le site sont sécurisés.
+                            </p>
+                            <p>Un certificat SSL ("Secure Socket Layer" Certificate) a pour but de sécuriser les données
+                                échangées entre l'utilisateur et le site.
+                            </p>
+                            <p>De plus, le responsable du traitement des données s'engage à notifier l'utilisateur en
+                                cas de rectification ou de suppression des données, à moins que cela n'entraîne pour lui
+                                des formalités, coûts et démarches disproportionnés.
+                            </p>
+                            <p>Dans le cas où l'intégrité, la confidentialité ou la sécurité des données à caractère
+                                personnel de l'utilisateur est compromise, le responsable du traitement s'engage à
+                                informer l'utilisateur par tout moyen.
+                            </p>
+                            <p class="font-weight-bold my-5">C. LE DÉLÉGUÉ À LA PROTECTION DES DONNÉES</p>
+                            <p>Par ailleurs, l'utilisateur est informé que la personne suivante a été nommée Délégué à
+                                la Protection des Données : Evana Zeimeth et Lucie Laurent.
+                            </p>
+                            <p>Le rôle du Délégué à la Protection des Données et de s'assurer la bonne mise en oeuvre
+                                des dispositions nationales et supranationales relatives à la collecte et au traitement
+                                des données à caractère personnel. Il est parfois appelé DPO (pour Data Protection
+                                Officer).
+                            </p>
+                            <p>Les délégués à la protection des données peuvent être joints de la manière suivante :
+                            </p>
+                            <p class="pl-3">• Au téléphone au 0648603918 et par email à l'adresse suivante :
+                                evana.zed@orange.fr du lundi au vendredi de 9h à 17h.
+                            </p>
+                            <p class="pl-3">• Au téléphone au 0770472638 et par email à l'adresse suivante :
+                                lucie.laurent@protonmail.fr du lundi au vendredi de 8h à 16h30.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 5 : DROITS DE L'UTILISATEUR
+                            </h6>
+                            <p>Conformément à la réglementation concernant le traitement des données à caractère
+                                personnel, l'utilisateur possède les droits ci-après énumérés.
+                            </p>
+                            <p>Afin que le responsable du traitement des données fasse droit à sa demande, l'utilisateur
+                                est tenu de lui communiquer : ses prénom et nom ainsi que son adresse e-mail, et si cela
+                                est pertinent, son numéro de compte ou d'espace personnel ou d'abonné.
+                            </p>
+                            <p>Le responsable du traitement des données est tenu de répondre à l'utilisateur dans un
+                                délai de 30 jours maximum.
+                            </p>
+                            <p class="font-weight-bold my-5">A. PRÉSENTATION DES DROITS DE L'UTILISATEUR EN MATIÈRE DE
+                                COLLECTE ET TRAITEMENT DE DONNÉES
+                            </p>
+                            <p class="my-5">a. Droit d'accès, de rectification et droit à l'effacement</p>
+                            <p>L'utilisateur peut prendre connaissance, mettre à jour, modifier ou demander la
+                                suppression des données le concernant, en respectant la procédure ci-après énoncée :
+                            </p>
+                            <p class="pl-3">L’utilisateur doit envoyer un e-mail au responsable du traitement des
+                                données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse
+                                e-mail de contact qui est fourni plus haut
+                            </p>
+                            <p>S'il en possède un, l'utilisateur a le droit de demander la suppression de son espace
+                                personnel en suivant la procédure suivante :
+                            </p>
+                            <p class="pl-3">L’utilisateur doit envoyer un e-mail u responsable du traitement des
+                                données, en précisant l’objet de sa demande et en utilisant l’adresse e-mail de contact
+                                qui est fourni plus haut.
+                            </p>
+                            <p class="my-5">b. Droit à la portabilité des données
+                            </p>
+                            <p>L'utilisateur a le droit de demander la portabilité de ses données personnelles, détenues
+                                par le site, vers un autre site, en se conformant à la procédure ci-après :
+                            </p>
+                            <p class="pl-3">L’utilisateur doit faire une demande de portabilité de ses données
+                                personnelles auprès du responsable du traitement des données, en envoyant un e-mail à
+                                l’adresse ci-dessus.
+                            </p>
+                            <p class="my-5">c. Droit à la limitation et à l'opposition du traitement des données
+                            </p>
+                            <p>L'utilisateur a le droit de demander la limitation ou de s'opposer au traitement de ses
+                                données par le site, sans que le site ne puisse refuser, sauf à démontrer l'existence de
+                                motifs légitimes et impérieux, pouvant prévaloir sur les intérêts et les droits et
+                                libertés de l'utilisateur.
+                            </p>
+                            <p>Afin de demander la limitation du traitement de ses données ou de formuler une opposition
+                                au traitement de ses données, l'utilisateur doit suivre la procédure suivante :
+                            </p>
+                            <p class="pl-3">L’utilisateur doit faire une demande de limitation au traitement de ses
+                                données personnelles auprès du responsable du traitement des données en envoyant un
+                                e-mail à l’adresse prévue ci-dessus
+                            </p>
+                            <p class="my-5">d. Droit de ne pas faire l'objet d'une décision fondée exclusivement sur un
+                                procédé automatisé</p>
+                            <p>Conformément aux dispositions du règlement 2016/679, l'utilisateur a le droit de ne pas
+                                faire l'objet d'une décision fondée exclusivement sur un procédé automatisé si la
+                                décision produit des effets juridiques le concernant, ou l'affecte de manière
+                                significative de façon similaire.
+                            </p>
+                            <p class="my-5">e. Droit de déterminer le sort des données après la mort
+                            </p>
+                            <p>Il est rappelé à l'utilisateur qu'il peut organiser quel doit être le devenir de ses
+                                données collectées et traitées s'il décède, conformément à la loi n°2016-1321 du 7
+                                octobre 2016.</p>
+                            <p class="my-5">f. Droit de saisir l'autorité de contrôle compétente
+                            </p>
+                            <p>Dans le cas où le responsable du traitement des données décide de ne pas répondre à la
+                                demande de l'utilisateur, et que l'utilisateur souhaite contester cette décision, ou,
+                                s'il pense qu'il est porté atteinte à l'un des droits énumérés ci-dessus, il est en
+                                droit de saisir la CNIL (Commission Nationale de l'Informatique et des Libertés,
+                                https://www.cnil.fr) ou tout juge compétent.
+                            </p>
+                            <p class="font-weight-bold my-5">B. DONNÉES PERSONNELLES DES PERSONNES MINEURES
+                            </p>
+                            <p>Conformément aux dispositions de l'article 8 du règlement européen 2016/679 et à la loi
+                                Informatique et Libertés, seuls les mineurs âgés de 15 ans ou plus peuvent consentir au
+                                traitement de leurs données personnelles.
+                            </p>
+                            <p>Si l'utilisateur est un mineur de moins de 15 ans, l'accord d'un représentant légal sera
+                                requis afin que des données à caractère personnel puissent être collectées et traitées.
+                            </p>
+                            <p>L'éditeur du site se réserve le droit de vérifier par tout moyen que l'utilisateur est
+                                âgé de plus de 15 ans, ou qu'il aura obtenu l'accord d'un représentant légal avant de
+                                naviguer sur le site.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 6 : CONDITIONS DE MODIFICATION DE LA
+                                POLITIQUE DE CONFIDENTIALITÉ
+                            </h6>
+                            <p>L'éditeur du site se réserve le droit de modifier la présente politique de
+                                confidentialité afin de garantir sa conformité avec le droit en vigueur.
+                            </p>
+                            <p>Par conséquent, l'utilisateur est invité à venir consulter régulièrement cette politique
+                                de confidentialité afin de se tenir informé des derniers changements qui lui seront
+                                apportés.
+                            </p>
+                            <p>Il est porté à la connaissance de l'utilisateur que la dernière mise à jour de la
+                                présente politique de confidentialité est intervenue le : 02/05/2020.
+                            </p>
+                            <h6 class="text-center font-weight-bold my-5">ARTICLE 7 : ACCEPTATION PAR L'UTILISATEUR DE
+                                LA POLITIQUE DE CONFIDENTIALITÉ</h6>
+                            <p>En naviguant sur le site, l'utilisateur atteste avoir lu et compris la présente politique
+                                de confidentialité et en accepte les conditions, en ce qui concerne plus
+                                particulièrement la collecte et le traitement de ses données à caractère personnel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="charteGraphique">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                Charte Graphique
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse6" class="collapse" aria-labelledby="charteGraphique"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify">
+                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
+                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
+                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
+                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
+                            quant à elles, sont designées par la plateforme Freepik.
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-light bg-dark">
+                    <div class="card-header" id="assistance">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-secondary" type="button" data-toggle="collapse"
+                                    data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                                Assistance
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse7" class="collapse" aria-labelledby="assistance"
+                         data-parent="#accordionAbout">
+                        <div class="card-body text-justify">
+                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
+                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
+                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
+                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
+                            quant à elles, sont designées par la plateforme Freepik.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -148,3 +148,8 @@ a.list-group-item {
     cursor: inherit;
     display: block;
 }
+
+.btn-link:hover, .btn-link:focus, .btn-link.focus {
+    color: #0056b3;
+    text-decoration: none!important;
+}

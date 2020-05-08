@@ -153,3 +153,7 @@ a.list-group-item {
     color: #0056b3;
     text-decoration: none!important;
 }
+
+.card {
+    border: none!important;
+}

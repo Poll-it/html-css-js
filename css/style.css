@@ -157,3 +157,14 @@ a.list-group-item {
 .card {
     border: none!important;
 }
+
+.modal-header {
+    border-bottom: 1px solid #1c1e2f!important;
+}
+
+.modal-footer {
+    border-top: 1px solid #1c1e2f!important;
+}
+
+
+

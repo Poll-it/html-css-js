@@ -196,7 +196,8 @@
                             </button>
                         </div>
                     </div>
-                    <p class="ml-5 mr-2 pl-4 mt-1">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
+                    <p class="ml-5 mr-2 pl-4 mt-1 text-justify">In gravida nulla. Nulla vel metus scelerisque ante
+                        sollicitudin. Cras
                         purus odio, vestibulum in
                         vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
                         lacinia congue felis in faucibus.</p>
@@ -224,28 +225,35 @@
                             </button>
                         </div>
                     </div>
-                    <p class="ml-5 mr-2 pl-4 mt-1">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
+                    <p class="ml-5 mr-2 pl-4 mt-1 text-justify">In gravida nulla. Nulla vel metus scelerisque ante
+                        sollicitudin. Cras
                         purus odio, vestibulum in
                         vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
                         lacinia congue felis in faucibus.</p>
                 </div>
             </div>
-            <div class="bg-dark">
-                <div class="row m-3 d-flex justify-content-start">
-                    <div class="align-self-start">
-                        <a class="btn btn-dark text-light" href="#"><i class="fas fa-smile"></i></a>
-                        <a class="btn btn-dark text-light" href="#"><i class="fas fa-paperclip"></i></a>
-                    </div>
-                    <div class="flex-fill">
-                        <form autocomplete="off" method="POST" action="#">
-                            <div class="input-group">
-                                <input type="text" class="form-control bg-dark text-light"
-                                       placeholder="Tape ton message">
-                                <div class="input-group-append">
-                                    <button class="btn btn-secondary" type="submit">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="input-group bg-dark p-2">
+                        <a class="btn btn-primary text-light ml-2" href="#" data-container="body" data-toggle="popover"
+                           data-placement="bottom" data-content="
+                                        <a href='#'>😄</a>
+                                        <a href='#'>😍</a>
+                                        <a href='#'>🤔</a>
+                                        <a href='#'>😭</a>
+                                        <a href='#'>😠</a>
+                                        <a href='#'>❤</a>
+                                    "><i class="fas fa-smile"></i></a>
+                        <span class="btn btn-primary btn-file text-light ml-2">
+                                <i class="fas fa-link"></i><input type="file">
+                            </span>
+                        <input type="text" class="ml-2 form-control bg-dark text-light" placeholder="Partage ton avis"
+                               aria-label="commentText" aria-describedby="btn-envoyer">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-sm btn-secondary" id="btnenvoyer">Envoyer</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,26 +349,6 @@
         $('.shareEvent').on("click", function () {
             $('.share').toggleClass("text-info");
         });
-        let i = 2;
-        $('#plusEvent').on("click", function () {
-            if (i < 5) {
-                i++;
-                $("#choice").append(' <div class="row align-items-end">\n' +
-                    '                                                <div class="col-10 pr-0">\n' +
-                    '                                                    <input type="text" class="mt-2 form-control bg-primary text-light"\n' +
-                    '                                                           id="choice' + i + '" placeholder="Quel choix proposes-tu ?">\n' +
-                    '                                                </div>\n' +
-                    '                                                <div class="col-2 pl-1">\n' +
-                    '                                                    <a class="btn btn-primary text-light plusEvent"><i\n' +
-                    '                                                            class="fas fa-trash-alt" id="removeChoice' + i + '"></i></a>\n' +
-                    '                                                </div>\n' +
-                    '                                            </div>');
-            } else {
-                $('#maxChoice').show();
-            }
-        });
-
-
     })
 </script>
 </body>

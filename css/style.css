@@ -167,4 +167,10 @@ a.list-group-item {
 }
 
 
+.btn-info:hover, .btn-info:focus, .btn-info.focus {
+    color: #fff;
+    background-color: #138496;
+    box-shadow: none!important;
+}
+
 

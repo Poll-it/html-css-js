@@ -27,8 +27,9 @@
                         <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
-                                                                                class="rounded-circle img-flui"/> Profil</a>
+                        <a class="nav-link text-light" href="profile.html"><img
+                                src="donnees/img/photos_profil/photo_1_20x20.jpg"
+                                class="rounded-circle img-flui"/> Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
@@ -54,13 +55,13 @@
                            placeholder="Recherche quelqu'un ou quelque chose">
                 </div>
             </form>
-            <div class="img background rounded-top" style="background-image: url(//placehold.it/500);"></div>
+            <img src="donnees/img/photos_profil/photo_back.jpg" class="img-fluid rounded-top" alt="Responsive image">
             <div class="card profile bg-dark mb-4">
                 <div class="card-body pb-0">
                     <div class="wrapper mb-4">
-                        <img src="donnees/img/photos_profil/photo1.jpg" alt="Avatar">
+                        <img src="donnees/img/photos_profil/photo_1_150x150.jpg" alt="Avatar">
                         <h3>@Karla</h3>
-                        <span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+                        <span class="mt-1">L’informatique n’est qu’un outil, comme un pinceau ou un crayon.</span>
                         <div class="mt-3 row justify-content-center">
                             <a href="#" class="btn btn-primary text-light"><i class="fas fa-envelope"></i></a>
                             <button type="button" class="btn btn-sm btn-secondary ml-2">Suivre</button>
@@ -87,16 +88,99 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <div class="mb-3 card bg-dark text-light">
+                    <div class="mt-3 mb-3 card bg-dark text-primary">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-1">
-                                    <img src="//placehold.it/80" class="rounded-circle"/>
+                                    <img src="donnees/img/photos_profil/photo_1_80x80.jpg" alt="Photo de profil"
+                                         class="rounded-circle"/>
                                 </div>
                                 <div class="col-11">
-                                    <textarea class="form-control bg-primary text-light"
-                                              id="exampleFormControlTextarea1" rows="3"
-                                              placeholder="Tu veux sonder quelque chose ?"></textarea>
+                            <textarea class="form-control bg-primary text-light" id="exampleFormControlTextarea1"
+                                      rows="3" placeholder="Tu veux sonder quelque chose ?"></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-9">
+                                </div>
+                                <div class="col">
+                                    <a class="btn btn-primary text-light" href="#" data-container="body"
+                                       data-toggle="popover"
+                                       data-placement="bottom" data-content="
+                                        <a href='#'>😄</a>
+                                        <a href='#'>😍</a>
+                                        <a href='#'>🤔</a>
+                                        <a href='#'>😭</a>
+                                        <a href='#'>😠</a>
+                                        <a href='#'>❤</a>
+                                    "><i class="fas fa-smile"></i></a>
+                                    <span class="btn btn-primary btn-file text-light">
+                                <i class="fas fa-link"></i><input type="file">
+                            </span>
+                                    <a class="btn btn-primary text-light ml-3" data-toggle="modal"
+                                       data-target="#btn-file"><i
+                                            class="fas fa-plus"></i></a>
+                                    <button class="btn btn-secondary ml-3" type="submit">Envoyer</button>
+                                </div>
+                                <div class="modal fade" id="btn-file" tabindex="-1" role="dialog"
+                                     aria-labelledby="modalFile"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content bg-dark text-light">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="modalFile">Quels choix pour votre sondage
+                                                    ?</h5>
+                                                <button type="button" class="close text-light" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form m-3" id="choice">
+                                                    <div class="alert alert-danger" id="maxChoice" role="alert"
+                                                         style="display: none;">
+                                                        Vous ne pouvez pas ajouter plus de 5 choix.
+                                                    </div>
+                                                    <label class="pl-1" for="choice1">Choix</label>
+                                                    <div class="row align-items-end">
+                                                        <div class="col-10 pr-0">
+                                                            <input type="text"
+                                                                   class="mt-2 form-control bg-primary text-light"
+                                                                   id="choice1" placeholder="Oui">
+                                                        </div>
+                                                        <div class="col-2 pl-1">
+                                                            <a class="btn btn-primary text-light" id="removeChoice1"><i
+                                                                    class="fas fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-end">
+                                                        <div class="col-10 pr-0">
+                                                            <input type="text"
+                                                                   class="mt-2 form-control bg-primary text-light"
+                                                                   id="choice2" placeholder="Non">
+                                                        </div>
+                                                        <div class="col-2 pl-1">
+                                                            <a class="btn btn-primary text-light" id="removeChoice2"><i
+                                                                    class="fas fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <div class="text-right">
+                                                    <button type="button" class="btn btn-secondary mr-2" id="plusEvent">
+                                                        Ajouter
+                                                        un choix
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">
+                                                        Enregistrer
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -104,13 +188,25 @@
 
                     <div class="mt-3 mb-3 card bg-dark text-light">
                         <div class="card-header">
-                            <div class="row">
+                            <div class="row align-items-center">
                                 <div class="col-8">
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light" href="#">@Karla</a>
+                                    <div class="ml-2 row align-items-center">
+                                        <img src="donnees/img/photos_profil/photo_2_50x50.jpg" alt="Photo de profil"
+                                             class="rounded-circle"/>
+                                        <a class="pl-3 text-light" href="#">@ Max</a>
+                                        <p class="pl-3 mb-0 text-light">-</p>
+                                        <p class="pl-3 mb-0 text-light">8m</p>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <p class="text-right">Publié le 16/04/2020 à 10h44</p>
+                                <div class="col-4 text-right">
+                                    <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
+                                            data-toggle="popover" data-placement="right" data-content="
+                                        <a href='#' class='row m-2 text-light'>Masquer</a>
+                                        <a href='#' class='row m-2 text-light'>Signaler</a>
+                                        <a href='#' class='row m-2 text-light'>Supprimer</a>
+                                    ">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -120,40 +216,39 @@
                                 <div class="col">
                                     <div class="row">
                                         <div class="col-12">
-                                            <p class="lead">Le confinement a-t-il un impact sur votre moral ?</p>
+                                            <p class="lead">Approuvez-vous le plan de déconfinement proposé par le
+                                                gouvernement
+                                                ?</p>
                                         </div>
                                         <div class="col-12 mt-3">
                                             <div class="row">
                                                 <div class="col-2">
-                                                    <input type="radio" id="oui" name="choix" value="oui">
-                                                    <label for="oui">Oui</label>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio1Poll1" name="poll1"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="Radio1Poll1">Oui</label>
+                                                    </div>
                                                 </div>
                                                 <div class="col-10">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                                             style="width: 48%" aria-valuenow="80" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input type="radio" id="non" name="choix" value="non">
-                                                    <label for="non">Non</label>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 7%" aria-valuenow="7" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio2Poll1" name="poll1"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="Radio2Poll1">Non</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-2">
-                                                    <input type="radio" id="dents" name="choix" value="dents">
-                                                    <label for="dents">sqdf</label>
-                                                </div>
                                                 <div class="col-10">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 13%" aria-valuenow="13" aria-valuemin="0"
+                                                             style="width: 52%" aria-valuenow="7" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
@@ -164,17 +259,24 @@
                                 <div class="col-auto align-self-end">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-lightbulb"></i></a>
+                                            <a class="nav-link text-light likeEvent"><i
+                                                    class="fas fa-lightbulb like"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-share"></i></a>
+                                            <a class="nav-link text-light shareEvent"><i class="fas fa-share share"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-comment"></i></a>
+                                            <a class="nav-link text-light" href="comments.html"><i
+                                                    class="fas fa-comment"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i
-                                                    class="fab fa-telegram-plane"></i></a>
+                                            <a href="#" class="nav-link text-light" data-container="body"
+                                               data-toggle="popover"
+                                               data-placement="right" data-content="
+                                        <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
+                                        <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
+                                        <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
+                                    "><i class="fab fa-telegram-plane"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -184,13 +286,25 @@
 
                     <div class="mt-3 mb-3 card bg-dark text-light">
                         <div class="card-header">
-                            <div class="row">
+                            <div class="row align-items-center">
                                 <div class="col-8">
-                                    <img src="//placehold.it/40" class="rounded-circle"/>
-                                    <a class="text-light" href="#">@Karla</a>
+                                    <div class="ml-2 row align-items-center">
+                                        <img src="donnees/img/photos_profil/photo_1_50x50.jpg" alt="Photo de profil"
+                                             class="rounded-circle"/>
+                                        <a class="pl-3 text-light" href="#">@ Léa</a>
+                                        <p class="pl-3 mb-0 text-light">-</p>
+                                        <p class="pl-3 mb-0 text-light">10m</p>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <p class="text-right">Publié le 16/04/2020 à 10h44</p>
+                                <div class="col-4 text-right">
+                                    <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
+                                            data-toggle="popover" data-placement="right" data-content="
+                                        <a href='#' class='row m-2 text-light'>Masquer</a>
+                                        <a href='#' class='row m-2 text-light'>Signaler</a>
+                                        <a href='#' class='row m-2 text-light'>Supprimer</a>
+                                    ">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -205,8 +319,12 @@
                                         <div class="col-12 mt-3">
                                             <div class="row">
                                                 <div class="col-2">
-                                                    <input type="radio" id="oui" name="choix" value="oui">
-                                                    <label for="oui">Oui</label>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio1Poll2" name="poll2"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="Radio1Poll2">Tout le
+                                                            temps</label>
+                                                    </div>
                                                 </div>
                                                 <div class="col-10">
                                                     <div class="progress">
@@ -216,24 +334,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-2">
-                                                    <input type="radio" id="non" name="choix" value="non">
-                                                    <label for="non">Non</label>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio2Poll2" name="poll2"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="Radio2Poll2">Parfois</label>
+                                                    </div>
                                                 </div>
                                                 <div class="col-10">
                                                     <div class="progress">
                                                         <div class="progress-bar bg-secondary" role="progressbar"
                                                              style="width: 7%" aria-valuenow="7" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-2">
-                                                    <input type="radio" id="dents" name="choix" value="dents">
-                                                    <label for="dents">sqdf</label>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 13%" aria-valuenow="13" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
@@ -244,17 +355,230 @@
                                 <div class="col-auto align-self-end">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-lightbulb"></i></a>
+                                            <a class="nav-link text-light likeEvent"><i
+                                                    class="fas fa-lightbulb like"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-share"></i></a>
+                                            <a class="nav-link text-light shareEvent"><i class="fas fa-share share"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i class="fas fa-comment"></i></a>
+                                            <a class="nav-link text-light" href="comments.html"><i
+                                                    class="fas fa-comment"></i></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-light" href="#"><i
-                                                    class="fab fa-telegram-plane"></i></a>
+                                            <a href="#" class="nav-link text-light" data-container="body"
+                                               data-toggle="popover"
+                                               data-placement="right" data-content="
+                                        <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
+                                        <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
+                                        <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
+                                    "><i class="fab fa-telegram-plane"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 mb-3 card bg-dark text-light">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <div class="ml-2 row align-items-center">
+                                        <img src="donnees/img/photos_profil/photo_4_50x50.jpg" alt="Photo de profil"
+                                             class="rounded-circle"/>
+                                        <a class="pl-3 text-light" href="#">@ Ricky</a>
+                                        <p class="pl-3 mb-0 text-light">-</p>
+                                        <p class="pl-3 mb-0 text-light">23m</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
+                                            data-toggle="popover" data-placement="right" data-content="
+                                        <a href='#' class='row m-2 text-light'>Masquer</a>
+                                        <a href='#' class='row m-2 text-light'>Signaler</a>
+                                        <a href='#' class='row m-2 text-light'>Supprimer</a>
+                                    ">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="lead">Le cinéma a-t-il besoin de plus d'héroïnes ?</p>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio1Poll3" name="poll3"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="Radio1Poll3">Définitivement</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary" role="progressbar"
+                                                             style="width: 63%" aria-valuenow="80" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio2Poll3" name="poll3"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="Radio2Poll3">Pas
+                                                            forcément</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary" role="progressbar"
+                                                             style="width: 37%" aria-valuenow="7" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto align-self-end">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light likeEvent"><i
+                                                    class="fas fa-lightbulb like"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light shareEvent"><i class="fas fa-share share"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="comments.html"><i
+                                                    class="fas fa-comment"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light" data-container="body"
+                                               data-toggle="popover"
+                                               data-placement="right" data-content="
+                                        <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
+                                        <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
+                                        <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
+                                    "><i class="fab fa-telegram-plane"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 mb-3 card bg-dark text-light">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <div class="ml-2 row align-items-center">
+                                        <img src="donnees/img/photos_profil/photo_3_50x50.jpg" alt="Photo de profil"
+                                             class="rounded-circle"/>
+                                        <a class="pl-3 text-light" href="#">@ Cécé</a>
+                                        <p class="pl-3 mb-0 text-light">-</p>
+                                        <p class="pl-3 mb-0 text-light">30m</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
+                                            data-toggle="popover" data-placement="right" data-content="
+                                        <a href='#' class='row m-2 text-light'>Masquer</a>
+                                        <a href='#' class='row m-2 text-light'>Signaler</a>
+                                        <a href='#' class='row m-2 text-light'>Supprimer</a>
+                                    ">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="lead">Comptez-vous partir en vancance cet été ?</p>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio1Poll4" name="poll4"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="Radio1Poll4">Oui</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary" role="progressbar"
+                                                             style="width: 17%" aria-valuenow="80" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio2Poll4" name="poll4"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="Radio2Poll4">Non</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary" role="progressbar"
+                                                             style="width: 53%" aria-valuenow="7" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Radio3Poll4" name="poll4"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="Radio3Poll4">Je ne sais
+                                                            pas</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary" role="progressbar"
+                                                             style="width: 30%" aria-valuenow="7" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto align-self-end">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light likeEvent"><i
+                                                    class="fas fa-lightbulb like"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light shareEvent"><i class="fas fa-share share"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="comments.html"><i
+                                                    class="fas fa-comment"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light" data-container="body"
+                                               data-toggle="popover"
+                                               data-placement="right" data-content="
+                                        <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
+                                        <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
+                                        <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
+                                    "><i class="fab fa-telegram-plane"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -271,8 +595,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_5_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ John</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -282,8 +606,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_6_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Baby 5</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -293,8 +617,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_7_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Abby</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -304,8 +628,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_8_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Pauline</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -315,8 +639,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_9_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Serena</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -326,8 +650,41 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_10_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ James</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_11_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Clara</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_12_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Maya</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_13_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Michael</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -346,8 +703,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_14_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Helène</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -357,8 +714,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_15_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Cléa</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -368,8 +725,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_16_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Bart</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -379,8 +736,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_17_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Melissa</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -390,8 +747,8 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_9_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Serena</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -401,8 +758,41 @@
                                 <li class="list-group-item bg-dark text-light">
                                     <div class="row justify-content-between">
                                         <div>
-                                            <img src="//placehold.it/40" class="rounded-circle"/>
-                                            <a class="text-light pl-2" href="#">@Karla</a>
+                                            <img src="donnees/img/photos_profil/photo_10_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ James</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_11_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Clara</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_12_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Maya</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-dark text-light">
+                                    <div class="row justify-content-between">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_13_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-2" href="#">@ Michael</a>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
@@ -424,60 +814,74 @@
                     </div>
                     <div class="card-body">
                         <p>
-                            <a class="card-text text-light" href="#">Les Français respectent-ils assez le confinement
-                                ?</a>
+                            <a class="card-text text-light" href="#">Etes-vous pour une application de traçage numérique pour limiter la propagation du Covid-19 ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Considérez-vous l'adoption d'un animal comme une
-                                sortie de première nécessité ?</a>
+                            <a class="card-text text-light" href="#">Croyez-vous à un reconfinement dans les prochains jours en France ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                            <a class="card-text text-light" href="#">Louez-vous encore des films en VOD ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Le monde gagnerait-il à devenir végétarien ?</a>
+                            <a class="card-text text-light" href="#">Le cloud gaming va-t-il remplacer les jeux sur console ?</a>
                         </p>
                     </div>
                     <div class="card-footer">
                         <div class="row">
                             <div class="col"></div>
                             <div class="col-8">
-                                <a class="btn btn-block btn-secondary">Voir plus</a>
+                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
                             </div>
                             <div class="col"></div>
                         </div>
                     </div>
                 </div>
-                <div href="notifications.html" class="card bg-dark text-light text-center mt-3">
+                <div class="card bg-dark text-light text-center mt-3">
                     <div class="card-header">
                         Recommandations pour vous
                     </div>
                     <div class="card-body">
-                        <div>
-                            <img src="//placehold.it/40" class="rounded-circle"/>
-                            <a class="text-light ml-2" href="#">@Karla</a>
-                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        <div class="row">
+                            <div class="col text-left">
+                                <img src="donnees/img/photos_profil/photo_30_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                <a class="text-light ml-2" href="#">@ Jhin</a>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                            </div>
                         </div>
                         <hr>
-                        <div>
-                            <img src="//placehold.it/40" class="rounded-circle"/>
-                            <a class="text-light ml-2" href="#">@Karla</a>
-                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        <div class="row">
+                                <div class="col text-left">
+                                    <img src="donnees/img/photos_profil/photo_31_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                    <a class="text-light ml-2" href="#">@ Rose</a>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                </div>
                         </div>
                         <hr>
-                        <div>
-                            <img src="//placehold.it/40" class="rounded-circle"/>
-                            <a class="text-light ml-2" href="#">@Karla</a>
-                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        <div class="row">
+                            <div class="col text-left">
+                                <img src="donnees/img/photos_profil/photo_32_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                <a class="text-light ml-2" href="#">@ Arthur</a>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                            </div>
                         </div>
                         <hr>
-                        <div>
-                            <img src="//placehold.it/40" class="rounded-circle"/>
-                            <a class="text-light ml-2" href="#">@Karla</a>
-                            <button type="button" class="btn btn-sm btn-secondary ml-4">Suivre</button>
+                        <div class="row">
+                            <div class="col text-left">
+                                <img src="donnees/img/photos_profil/photo_33_40x40.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                <a class="text-light ml-2" href="#">@ Caitlyn</a>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
@@ -497,5 +901,39 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({html: true});
+        $('.likeEvent').on("click", function () {
+            $('.like').toggleClass("text-secondary");
+        });
+        $('.shareEvent').on("click", function () {
+            $('.share').toggleClass("text-info");
+        });
+        let i = 2;
+        $('#plusEvent').on("click", function () {
+            if (i < 5) {
+                i++;
+                $("#choice").append(' <div class="row align-items-end">\n' +
+                    '                                                <div class="col-10 pr-0">\n' +
+                    '                                                    <input type="text" class="mt-2 form-control bg-primary text-light"\n' +
+                    '                                                           id="choice' + i + '" placeholder="Quel choix proposes-tu ?">\n' +
+                    '                                                </div>\n' +
+                    '                                                <div class="col-2 pl-1">\n' +
+                    '                                                    <a class="btn btn-primary text-light plusEvent"><i\n' +
+                    '                                                            class="fas fa-trash-alt" id="removeChoice' + i + '"></i></a>\n' +
+                    '                                                </div>\n' +
+                    '                                            </div>');
+            } else {
+                $('#maxChoice').show();
+            }
+        });
+        $(".followEvent").each(function () {
+            $(this).on("click", function () {
+                $(this).text('Abonné');
+            });
+        });
+    })
+</script>
 </body>
 </html>

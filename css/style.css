@@ -65,7 +65,8 @@ textarea {
 }
 
 .background {
-    height: 200px;
+    height: 30%;
+    width: 100%;
     background-size: cover;
 }
 

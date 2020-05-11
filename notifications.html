@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de notifications">
+    <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
+                                social, échange, communication, expression, liberté, enquête, réaction">
+    <meta name="author" content="Lucie Laurent et Evana Zeimeth">
     <title>Poll it</title>
     <link rel="stylesheet" href="css/fas.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-primary">
 <div class="container-fluid mt-5">
     <div class="row mr-4 ml-4">
         <div class="col-2">
+            <!-- Barre de navigation -->
             <ul class="card nav flex-column p-3 sticky-top bg-dark">
                 <div class="align-self-center">
                     <li class="nav-item">
@@ -48,6 +53,7 @@
         </div>
 
         <div class="col-8">
+            <!-- Barre de recherche -->
             <form autocomplete="off" method="POST" action="#">
                 <div class="form-group has-search">
                     <span class="fas fa-search form-control-feedback"></span>
@@ -57,6 +63,7 @@
             </form>
 
             <div class="bg-dark">
+                <!-- Menu -->
                 <ul class="nav nav-pills nav-fill mb-3 justify-content-around" id="notifTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active text-light" id="pills-notif-tab" data-toggle="pill"
@@ -74,7 +81,7 @@
                     </li>
                 </ul>
             </div>
-
+            <!-- Notifications de l'utilisateur -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-notif" role="tabpanel"
                      aria-labelledby="pills-notif-tab">
@@ -138,6 +145,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Recommandation de sondage oour l'utilisateur -->
                 <div class="tab-pane fade" id="pills-suggest" role="tabpanel" aria-labelledby="pills-suggest-tab">
                     <div class="row">
                         <div class="col text-light">
@@ -167,6 +175,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Suggestion de comptes à suivre pour l'utilisateur -->
                 <div class="tab-pane fade" id="pills-recommandation" role="tabpanel"
                      aria-labelledby="pills-recommandation-tab">
                     <div class="row">
@@ -328,10 +337,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
+        <!-- Zone suggestion de sondage -->
         <div class="col-2">
             <div class="sticky-top">
                 <div class="card bg-dark text-light text-center">
@@ -365,6 +372,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Zone suggestion d'utilisateur -->
                 <div class="card bg-dark text-light text-center mt-3">
                     <div class="card-header">
                         Recommandations pour vous

@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de connexion et d'inscription au site">
+    <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
+                                social, échange, communication, expression, liberté, enquête, réaction">
+    <meta name="author" content="Lucie Laurent et Evana Zeimeth">
     <title>Poll it</title>
     <link rel="stylesheet" href="css/fas.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-primary">
 <div class="container mt-5">
     <div class="row bg-dark">
+        <!-- Vidéo de présentation du site -->
         <div class="col-md m-5 embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xQY4TftXMyA"
                     allowfullscreen></iframe>
         </div>
         <div class="col-md m-5">
+            <!-- Formulaire de connexion -->
             <form>
                 <div class="alert alert-secondary" id="successRegister" role="alert" style="display: none;">
                     Merci pour votre inscription ! Vous pouvez dès à présent vous connecter.
@@ -46,6 +52,7 @@
                                 data-target="#registerModal">S'inscrire
                         </button>
                     </div>
+                    <!-- Formulaire d'inscription -->
                     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
                          aria-labelledby="registerModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -83,7 +90,7 @@
                                     </div>
                                     <div class="form-row mt-3">
                                         <div class="col">
-                                            <label class="pl-1" for="password">Mot de passe *</label>
+                                            <label class="pl-1" for="passwordFirst">Mot de passe *</label>
                                             <input type="password" class="form-control bg-primary text-light"
                                                    id="passwordFirst">
                                         </div>
@@ -127,16 +134,18 @@
     </div>
 
     <hr class="mt-5">
-
+    <!-- Cartes pour présenter le site -->
     <div class="row mb-3">
         <div class="col-md-4 mb-2">
             <div class="card bg-dark text-light">
                 <img src="donnees/img/index/decouvrir.svg" class="card-img-top" alt="Découvrir">
                 <div class="card-body">
                     <h5 class="card-title text-center">Découvrir</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque deleniti
-                        asperiores molestias eius. Similique iusto libero dolore eum hic unde, quasi in quibusdam modi
-                        officiis quisquam dignissimos repellat quas!</p>
+                    <p class="card-text text-justify pb-4">Si vous lisez ces quelques lignes c'est peut-être que vous
+                        souhaitez sonder quelque chose. Peut-être qu'un sujet d'actualité vous a interpellé. Ou
+                        peut-être ameriez-vous avoir l'avis d'une ou plusieurs personnes. Les sondages et les débats ont
+                        souvent été négligés en ligne, pourtant ils sont un puissant moyen d'expression. Et si vous vous
+                        exprimiez avec nous ?</p>
                 </div>
             </div>
         </div>
@@ -144,10 +153,12 @@
             <div class="card bg-dark text-light">
                 <img src="donnees/img/index/partager.svg" class="card-img-top" alt="Partager">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Partager</h5>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor molestiae quasi
-                        facere cum repudiandae accusantium qui, quos nobis, eaque architecto deserunt voluptas dolorem
-                        neque amet, laborum aut cumque recusandae ut.</p>
+                    <h5 class="card-title text-center text-justify">Partager</h5>
+                    <p class="card-text text-justify pb-5">Sonder n'a jamais été aussi facile et rapide. Le partage
+                        accompagné de la
+                        bienveillance et la liberté de penser sont pour nous des notions fondamentales. Si vous nous
+                        rejoignez, nous souhaitons que vous puisiez rester vous-même, sentez-vous libre. La communauté
+                        n'attend qu'à partager ses meilleures idées avec vous.</p>
                 </div>
             </div>
         </div>
@@ -156,18 +167,21 @@
                 <img src="donnees/img/index/sinspirer.svg" class="card-img-top" alt="S'insipirer">
                 <div class="card-body">
                     <h5 class="card-title text-center">S'inspirer</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel delectus ducimus
-                        rem voluptates perspiciatis ad beatae repudiandae et dignissimos molestias omnis cum quas
-                        adipisci voluptate veniam, accusantium perferendis odit soluta?</p>
+                    <p class="card-text text-justify">Derrière ce mur de pixel, c'est une communauté bienveillante et
+                        soucieuse de
+                        réflexion qui interagie chaque jour, nous y veillons. En passant de l'actualité, au sport, la
+                        culture ou les petites choses du quotidien que nous avons tendance à oublier, inspirez vous et
+                        construisez votre propre opinion. Et que vous soyez lecteur timide ou grand plaideur, nous
+                        vous ferons toujours une place, soyez en sûr.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/app.js"></script>
 
 <script>
     $(function () {

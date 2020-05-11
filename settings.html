@@ -27,8 +27,9 @@
                         <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img src="//placehold.it/20"
-                                                                                class="rounded-circle img-flui"/> Profil</a>
+                        <a class="nav-link text-light" href="profile.html"><img
+                                src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                class="rounded-circle img-flui"/> Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
@@ -40,7 +41,7 @@
                         <label class="custom-control-label" for="customSwitch1"></label>
                     </div>
                 </div>
-                <a class="text-center text-light" href="about.html">A propos</i></a>
+                <a class="text-center text-light" href="about.html">A propos</a>
                 <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
             </ul>
@@ -111,14 +112,18 @@
                                     <label for="bio">Biographie</label>
                                     <textarea class="form-control bg-primary text-light" id="bio" rows="3"></textarea>
                                 </div>
-                                <button class="btn btn-info text-light" type="button" data-toggle="modal" data-target="#suppressAccountModal">Supprimer mon compte</button>
+                                <button class="btn btn-info text-light" type="button" data-toggle="modal"
+                                        data-target="#suppressAccountModal">Supprimer mon compte
+                                </button>
                             </form>
-                            <div class="modal fade" id="suppressAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="suppressAccountModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content text-light bg-dark">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                            <button type="button" class="close text-light" data-dismiss="modal"
+                                                    aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
@@ -126,7 +131,7 @@
                                             Voulez-vous vraiment supprimer votre compte ?
                                         </div>
                                         <div class="modal-footer justify-content-center">
-                                            <a href="delete.html" class="btn btn-secondary" data-dismiss="modal">Supprimer</a>
+                                            <a href="delete.html" class="btn btn-secondary">Supprimer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -265,19 +270,23 @@
                     </div>
                     <div class="card-body">
                         <p>
-                            <a class="card-text text-light" href="#">Comprenez-vous l'engouement qu'a provoqué le jeu Animal Crossing New Horizon ?</a>
+                            <a class="card-text text-light" href="#">Comprenez-vous l'engouement qu'a provoqué le jeu
+                                Animal Crossing New Horizon ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Allez-vous regarder la série documentaire sur Michael Jordan ?</a>
+                            <a class="card-text text-light" href="#">Allez-vous regarder la série documentaire sur
+                                Michael Jordan ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Etes-vous en faveur d'une reprise à huis clos de la Ligue 1 ?</a>
+                            <a class="card-text text-light" href="#">Etes-vous en faveur d'une reprise à huis clos de la
+                                Ligue 1 ?</a>
                         </p>
                         <hr>
                         <p>
-                            <a class="card-text text-light" href="#">Trouvez-vous que les femmes sont sous-représentée  ?</a>
+                            <a class="card-text text-light" href="#">Trouvez-vous que les femmes sont sous-représentée
+                                ?</a>
                         </p>
                     </div>
                     <div class="card-footer">
@@ -360,13 +369,18 @@
     $(function () {
         $('#successAccount').on('click', function () {
             $('#successSettings1').show();
-        })
+        });
         $('#successPassword').on('click', function () {
             $('#successSettings2').show();
-        })
+        });
         $('#successConfidential').on('click', function () {
             $('#successSettings3').show();
-        })
+        });
+        $(".followEvent").each(function () {
+            $(this).on("click", function () {
+                $(this).text('Abonné');
+            });
+        });
     })
 </script>
 </body>

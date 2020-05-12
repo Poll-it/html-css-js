@@ -15,9 +15,43 @@
 </head>
 
 <body class="bg-primary">
+<div class="d-block d-lg-none">
+    <!-- Barre de navigation responsive -->
+    <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
+        <li class="nav-item">
+            <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
+                    class="d-none d-md-block">Accueil</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                <span class="d-none d-md-block">Notifications</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
+                    class="d-none d-md-block">Messages</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                                                    class="rounded-circle img-flui"/> <span
+                    class="d-none d-md-block">Profil</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
+                    class="d-none d-md-block">Réglages</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
+                    class="d-none d-md-block">A propos</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
+                    class="d-none d-md-block">Déconnexion</span></a>
+        </li>
+    </nav>
+</div>
 <div class="container-fluid mt-5">
-    <div class="row mr-4 ml-4">
-        <div class="col-2">
+    <div class="row mx-lg-4">
+        <div class="col-lg-2 d-none d-xl-block">
             <!-- Barre de navigation -->
             <ul class="card nav flex-column p-3 sticky-top bg-dark">
                 <div class="align-self-center">
@@ -32,9 +66,8 @@
                         <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img
-                                src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
-                                class="rounded-circle img-flui"/> Profil</a>
+                        <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                                                                class="rounded-circle img-flui"/> Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
@@ -50,9 +83,11 @@
                 <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
             </ul>
+
+
         </div>
 
-        <div class="col-8 mb-5">
+        <div class="col-lg-12 col-xl-8-8 mb-5">
             <!-- Barre de recherche -->
             <form autocomplete="off" method="POST" action="#">
                 <div class="form-group has-search">
@@ -894,7 +929,7 @@
             </div>
         </div>
         <!-- Zone de suggestion de sondage -->
-        <div class="col-2">
+        <div class="col-xl-2 d-none d-xl-block">
             <div class="sticky-top">
                 <div class="card bg-dark text-light text-center">
                     <div class="card-header">

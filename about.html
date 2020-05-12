@@ -14,9 +14,43 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-primary">
+<div class="d-block d-lg-none">
+    <!-- Barre de navigation responsive -->
+    <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
+        <li class="nav-item">
+            <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
+                    class="d-none d-md-block">Accueil</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                <span class="d-none d-md-block">Notifications</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
+                    class="d-none d-md-block">Messages</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                                                    class="rounded-circle img-flui"/> <span
+                    class="d-none d-md-block">Profil</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
+                    class="d-none d-md-block">Réglages</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
+                    class="d-none d-md-block">A propos</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
+                    class="d-none d-md-block">Déconnexion</span></a>
+        </li>
+    </nav>
+</div>
 <div class="container-fluid mt-5">
-    <div class="row mr-4 ml-4">
-        <div class="col-2">
+    <div class="row mx-lg-4">
+        <div class="col-lg-2 d-none d-xl-block">
             <!-- Barre de navigation -->
             <ul class="card nav flex-column p-3 sticky-top bg-dark">
                 <div class="align-self-center">
@@ -31,9 +65,8 @@
                         <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img
-                                src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
-                                class="rounded-circle img-flui"/> Profil</a>
+                        <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                                                                class="rounded-circle img-flui"/> Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
@@ -49,8 +82,10 @@
                 <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
             </ul>
+
+
         </div>
-        <div class="col-10 mb-2 text-center">
+        <div class="col-lg-12 col-xl-10 mb-2 text-center">
             <div class="accordion" id="accordionAbout">
                 <div class="card text-light bg-dark">
                     <div class="card-header" id="who">
@@ -69,7 +104,7 @@
                                 Métier du multimédia et de l'internet. </p>
                             <p>Poll it est une première pour nous, il y aura
                                 forcément des écueils, mais nous sommes soucieuses de vous offrir un contenu de qualité.
-                                Nous avons passé beaucoup de temps à peaufiner notre idée, ce que nous souhaitions était un
+                                Nous avons passé beaucoup de temps à peaufiner notre idée. Ce que nous souhaitions était un
                                 endroit où les internautes pourraient user de leur liberté d'expression et de penser dans un
                                 cadre serein et bienveillant. Nous souhaitons que votre expérience sur notre site soit la
                                 plus immersive et intuitive possible, nous souhaitons que vous puissiez vous épanouir au
@@ -657,11 +692,7 @@
                     <div id="collapse6" class="collapse" aria-labelledby="charteGraphique"
                          data-parent="#accordionAbout">
                         <div class="card-body text-justify">
-                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
-                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
-                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
-                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
-                            quant à elles, sont designées par la plateforme Freepik.
+                            /
                         </div>
                     </div>
                 </div>
@@ -678,11 +709,32 @@
                     <div id="collapse7" class="collapse" aria-labelledby="assistance"
                          data-parent="#accordionAbout">
                         <div class="card-body text-justify">
-                            Le site Poll It a été conçu et développé par Laurent Lucie et Evana Zeimeth. Pour mener à
-                            bien ce projet, les technologies qui ont été utilisés sont : les langages HTML, CSS et
-                            JavaScript, ainsi que les libraires open source : JQuerry, Bootstrap et Font Awesome. Toutes
-                            les photos utilisées sont libres de droits et viennent du site Unsplash. Les illustrations,
-                            quant à elles, sont designées par la plateforme Freepik.
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="alert alert-success" id="successReport" role="alert" style="display: none;">
+                                            Votre rapport a bien été pris en compte. Nous reviendrons vers vous rapidement.
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nickname" class="text-light">Nom d'utilisateur</label>
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="bg-primary text-light input-group-text">@</div>
+                                                </div>
+                                                <input type="text" class="form-control bg-primary text-light" id="nickname"
+                                                       placeholder="Karla" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rapport">Quel est votre problème ?</label>
+                                            <textarea class="form-control bg-primary text-light" id="rapport" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                    <a href="#" id="report" class="btn btn-block btn-secondary text-light">Envoyer</a>
+                                </div>
+                                <div class="col"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -694,5 +746,12 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function () {
+        $('#report').on('click', function () {
+            $('#successReport').show();
+        });
+    })
+</script>
 </body>
 </html>

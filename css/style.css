@@ -178,3 +178,8 @@ a.list-group-item {
 .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #8862e0!important;
 }
+
+.custom-file-label {
+    color: white!important;
+}
+

@@ -1,530 +1,679 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page de notifications">
-    <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page de notifications">
+        <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
                                 social, échange, communication, expression, liberté, enquête, réaction">
-    <meta name="author" content="Lucie Laurent et Evana Zeimeth">
-    <title>Poll it</title>
-    <link rel="icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="css/fas.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/theme.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+        <meta name="author" content="Lucie Laurent et Evana Zeimeth">
+        <title>Poll it</title>
+        <link rel="icon" href="favicon.ico"/>
+        <link rel="stylesheet" href="css/fas.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body class="bg-primary">
-<div class="d-block d-lg-none">
-    <!-- Barre de navigation responsive -->
-    <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
-        <li class="nav-item">
-            <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
-                    class="d-none d-md-block">Accueil</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
-                <span class="d-none d-md-block">Notifications</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
-                    class="d-none d-md-block">Messages</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg"
-                                                                    alt="Photo de profil"
-                                                                    class="rounded-circle img-flui"/> <span
-                    class="d-none d-md-block">Profil</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
-                    class="d-none d-md-block">Réglages</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
-                    class="d-none d-md-block">A propos</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
-                    class="d-none d-md-block">Déconnexion</span></a>
-        </li>
-    </nav>
-</div>
-<div class="container-fluid mt-5">
-    <div class="row mx-lg-4">
-        <div class="col-lg-2 d-none d-xl-block">
-            <!-- Barre de navigation -->
-            <ul class="card nav flex-column p-3 sticky-top bg-dark">
-                <div class="align-self-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
-                            Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img
-                                src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
-                                class="rounded-circle img-flui"/> Profil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
-                    </li>
-                </div>
-                <div class="text-center">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                        <label class="custom-control-label" for="customSwitch1"></label>
-                    </div>
-                </div>
-                <a class="text-center text-light" href="about.html">A propos</a>
-                <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
-            </ul>
+    <body class="bg-primary">
+        <div class="d-block d-lg-none">
+            <!-- Barre de navigation responsive -->
+            <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
+                            class="d-none d-md-block">Accueil</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                        <span class="d-none d-md-block">Notifications</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
+                            class="d-none d-md-block">Messages</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg"
+                            alt="Photo de profil"
+                            class="rounded-circle img-flui"/> <span
+                            class="d-none d-md-block">Profil</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
+                            class="d-none d-md-block">Réglages</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
+                            class="d-none d-md-block">A propos</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
+                            class="d-none d-md-block">Déconnexion</span></a>
+                </li>
+            </nav>
         </div>
-
-        <div class="col-lg-12 col-xl-8">
-            <!-- Barre de recherche -->
-            <form autocomplete="off" method="POST" action="#">
-                <div class="form-group has-search">
-                    <span class="fas fa-search form-control-feedback"></span>
-                    <input type="text" class="text-light bg-dark form-control"
-                           placeholder="Recherche quelqu'un ou quelque chose">
-                </div>
-            </form>
-
-            <div class="bg-dark">
-                <!-- Menu -->
-                <ul class="nav nav-pills nav-fill mb-3 justify-content-around" id="notifTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light" id="pills-notif-tab" data-toggle="pill"
-                           href="#pills-notif" role="tab" aria-controls="pills-notif"
-                           aria-selected="true">Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" id="pills-suggest-tab" data-toggle="pill"
-                           href="#pills-suggest" role="tab" aria-controls="pills-suggest" aria-selected="false">Suggestions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" id="pills-recommandation-tab" data-toggle="pill"
-                           href="#pills-recommandation" role="tab" aria-controls="pills-recommandation"
-                           aria-selected="false">Recommandations</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Notifications de l'utilisateur -->
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-notif" role="tabpanel"
-                     aria-labelledby="pills-notif-tab">
-                    <ul class="list-group">
-                        <li class="bg-dark text-primary list-group-item">
-                            <a href="#">
-                                <div class="row align-middle">
-                                    <div class="ml-2">
-                                        <img src="donnees/img/photos_profil/photo_6_50x50.jpg" alt="Photo de profil"
-                                             class="rounded-circle"/>
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="m-0 text-light">May a aimé votre sondage</p>
-                                        <p class="m-0 text-light">Il y a 2 min</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="bg-dark list-group-item">
-                            <a href="#">
-                                <div class="row align-middle">
-                                    <div class="ml-2">
-                                        <img src="donnees/img/photos_profil/photo_7_50x50.jpg" alt="Photo de profil"
-                                             class="rounded-circle"/>
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="m-0 text-light">Michael a patagé votre sondage</p>
-                                        <p class="m-0 text-light">Il y a 9 min</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="bg-dark list-group-item">
-                            <a href="#">
-                                <div class="row align-middle">
-                                    <div class="ml-2">
-                                        <img src="donnees/img/photos_profil/photo_8_50x50.jpg" alt="Photo de profil"
-                                             class="rounded-circle"/>
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="m-0 text-light">Maya s'est abonnée à votre profil</p>
-                                        <p class="m-0 text-light">Il y a 18 min</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="bg-dark list-group-item">
-                            <a href="#">
-                                <div class="row align-middle">
-                                    <div class="ml-2">
-                                        <img src="donnees/img/photos_profil/photo_9_50x50.jpg" alt="Photo de profil"
-                                             class="rounded-circle"/>
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="m-0 text-light">James s'est abonné à votre profil</p>
-                                        <p class="m-0 text-light">Il y a 23 min</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+        <div class="container-fluid mt-5">
+            <div class="row mx-lg-4">
+                <div class="col-lg-2 d-none d-xl-block">
+                    <!-- Barre de navigation -->
+                    <ul class="card nav flex-column p-3 sticky-top bg-dark">
+                        <div class="align-self-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i> Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="profile.html"><img
+                                        src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                        class="rounded-circle img-flui"/> Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
+                            </li>
+                        </div>
+                        <div class="text-center">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1"></label>
+                            </div>
+                        </div>
+                        <a class="text-center text-light" href="about.html">A propos</a>
+                        <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
                     </ul>
                 </div>
-                <!-- Recommandation de sondage oour l'utilisateur -->
-                <div class="tab-pane fade" id="pills-suggest" role="tabpanel" aria-labelledby="pills-suggest-tab">
-                    <div class="row">
-                        <div class="col text-light">
-                            <ul class="list-group">
-                                <li class="bg-dark list-group-item text-center">Les tendances de cette semaine
-                                    pourraient
-                                    vous intéresser
-                                </li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Le cloud gaming
-                                    va-t-il remplacer les jeux sur console ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Etes-vous pour une
-                                    application de traçage numérique pour limiter la propagation du Covid-19 ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">La plateforme Disney +
-                                    peut-elle rivaliser avec Netflix ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">La France en fait-elle
-                                    assez pour développer les énergies renouvelables ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Louez-vous encore des
-                                    films en VOD ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Les jeux-vidéos
-                                    français peuvent-il concurrencer
-                                    les géants américains ?</a></li>
-                            </ul>
-                        </div>
-                        <div class="col text-light">
-                            <ul class="list-group">
-                                <li class="bg-dark list-group-item text-center">Découvrez ce que sondent vos amis en ce
-                                    moment
-                                </li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Eduardo Camavinga
-                                    devrait-il signer au Real Madrid ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Etes-vous pour une
-                                    cérémonie française qui récompenserait les jeux-vidéos ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Lisez-vous beaucoup de
-                                    livres au format numérique ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">L'algorithme de
-                                    Netflix vous convient-il ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">Pratiquez-vous
-                                    régulièrement de la course à pied ?</a></li>
-                                <li class="bg-dark list-group-item"><a class="text-light" href="">One Piece est-il le
-                                    meilleur manga ?</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Suggestion de comptes à suivre pour l'utilisateur -->
-                <div class="tab-pane fade" id="pills-recommandation" role="tabpanel"
-                     aria-labelledby="pills-recommandation-tab">
-                    <div class="row">
-                        <div class="col text-light">
-                            <ul class="list-group">
-                                <li class="bg-dark list-group-item text-center">Ces comptes pourraient vous intéresser
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Jo</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_36_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Clem</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_35_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Cedric</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_34_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Leya</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_33_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Caitlyn</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_1_40x40.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Jean</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col text-light">
-                            <ul class="list-group">
-                                <li class="bg-dark list-group-item text-center">Voyez quels comptes suivent vos amis
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_23_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Irelia</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_32_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Arthur</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_28_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Keira</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_25_40x40.jpg"
-                                                 alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Amanda</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_4_40x40.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Lé</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bg-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col text-left">
-                                            <img src="donnees/img/photos_profil/photo_3_40x40.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="text-light ml-2" href="#">@ Hugo</a>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Zone suggestion de sondage -->
-        <div class="col-xl-2 d-none d-xl-block">
-            <div class="sticky-top">
-                <div class="card bg-dark text-light text-center">
-                    <div class="card-header">
-                        Suggestions pour vous
-                    </div>
-                    <div class="card-body">
-                        <p>
-                            <a class="card-text text-light" href="#">L'Etat en fait-il assez pour soutenir la culture
-                                ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">Regardez-vous des séries ou des documentaires
-                                sportifs ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">Les artistes doivent-ils forcément être enagagés
-                                ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">Craignez-vous que certains animaux disparaissent
-                                définitivement à cause de la chasse ?</a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-8">
-                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
-                            </div>
-                            <div class="col"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Zone suggestion d'utilisateur -->
-                <div class="card bg-dark text-light text-center mt-3">
-                    <div class="card-header">
-                        Recommandations pour vous
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_18_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Kamila</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_19_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Idriss</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_20_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Lily</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_21_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ May</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-8">
-                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
-                            </div>
-                            <div class="col"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({html: true});
-        $(".followEvent").each(function () {
-            $(this).on("click", function () {
-                $(this).text('Abonné');
-            });
-        });
-    })
-</script>
-</body>
+                <div class="col-lg-12 col-xl-8">
+                    <!-- Barre de recherche -->
+                    <form autocomplete="off" method="POST" action="#">
+                        <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="text-light bg-dark form-control"
+                                    placeholder="Recherche quelqu'un ou quelque chose">
+                        </div>
+                    </form>
+
+                    <div class="bg-dark">
+                        <!-- Menu -->
+                        <ul class="nav nav-pills nav-fill mb-3 justify-content-around" id="notifTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active text-light" id="pills-notif-tab" data-toggle="pill"
+                                        href="#pills-notif" role="tab" aria-controls="pills-notif"
+                                        aria-selected="true">Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" id="pills-suggest-tab" data-toggle="pill"
+                                        href="#pills-suggest" role="tab" aria-controls="pills-suggest" aria-selected="false">Suggestions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" id="pills-recommandation-tab" data-toggle="pill"
+                                        href="#pills-recommandation" role="tab" aria-controls="pills-recommandation"
+                                        aria-selected="false">Recommandations</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Notifications de l'utilisateur -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-notif" role="tabpanel" aria-labelledby="pills-notif-tab">
+                            <ul class="list-group bg-dark">
+                                <li class="list-group-item bg-dark text-primary">
+                                    <a href="#">
+                                        <div class="row">
+                                            <div class="ml-2">
+                                                <img src="donnees/img/photos_profil/photo_6_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            </div>
+                                            <div class="pl-3">
+                                                <p class="m-0 text-light">May a aimé votre sondage</p>
+                                                <p class="m-0 text-light">Il y a 2 min</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item bg-dark">
+                                    <a href="#">
+                                        <div class="row">
+                                            <div class="ml-2">
+                                                <img src="donnees/img/photos_profil/photo_7_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            </div>
+                                            <div class="pl-3">
+                                                <p class="m-0 text-light">Michael a patagé votre sondage</p>
+                                                <p class="m-0 text-light">Il y a 9 min</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item bg-dark">
+                                    <a href="#">
+                                        <div class="row">
+                                            <div class="ml-2">
+                                                <img src="donnees/img/photos_profil/photo_8_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            </div>
+                                            <div class="pl-3">
+                                                <p class="m-0 text-light">Maya s'est abonnée à votre profil</p>
+                                                <p class="m-0 text-light">Il y a 18 min</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item bg-dark">
+                                    <a href="#">
+                                        <div class="row">
+                                            <div class="ml-2">
+                                                <img src="donnees/img/photos_profil/photo_9_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            </div>
+                                            <div class="pl-3">
+                                                <p class="m-0 text-light">James s'est abonné à votre profil</p>
+                                                <p class="m-0 text-light">Il y a 23 min</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Recommandation de sondage oour l'utilisateur -->
+                        <div class="tab-pane fade" id="pills-suggest" role="tabpanel" aria-labelledby="pills-suggest-tab">
+                            <div class="row">
+                                <div class="col-12 col-md-6 text-light mb-3 mb-md-0">
+                                    <div class="card bg-dark text-light">
+                                        <div class="card-header text-center">
+                                            Les tendances de cette semaine pourraient vous intéresser
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <ul class="list-group">
+                                        <li class="bg-dark list-group-item text-center">Les tendances de cette semaine
+                                            pourraient
+                                            vous intéresser
+                                        </li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">Le cloud gaming
+                                            va-t-il remplacer les jeux sur console ?</a></li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">Etes-vous pour une
+                                            application de traçage numérique pour limiter la propagation du Covid-19 ?</a></li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">La plateforme Disney +
+                                            peut-elle rivaliser avec Netflix ?</a></li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">La France en fait-elle
+                                            assez pour développer les énergies renouvelables ?</a></li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">Louez-vous encore des
+                                            films en VOD ?</a></li>
+                                        <li class="bg-dark list-group-item"><a class="text-light" href="">Les jeux-vidéos
+                                            français peuvent-il concurrencer
+                                            les géants américains ?</a></li>
+                                    </ul>
+                                    -->
+                                </div>
+                                <div class="col-12 col-md-6 text-light mb-3 mb-md-0">
+                                    <div class="card bg-dark text-light">
+                                        <div class="card-header text-center">
+                                            Les tendances de cette semaine pourraient vous intéresser
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text">
+                                                <a href="#" class="text-light">Le confinement a-t-il été bénéfique à la culture ?</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="col-12 col-md-6 text-light">
+                                        <ul class="list-group">
+                                            <li class="bg-dark list-group-item text-center">Découvrez ce que sondent vos amis en ce
+                                                moment
+                                            </li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">Eduardo Camavinga
+                                                devrait-il signer au Real Madrid ?</a></li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">Etes-vous pour une
+                                                cérémonie française qui récompenserait les jeux-vidéos ?</a></li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">Lisez-vous beaucoup de
+                                                livres au format numérique ?</a></li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">L'algorithme de
+                                                Netflix vous convient-il ?</a></li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">Pratiquez-vous
+                                                régulièrement de la course à pied ?</a></li>
+                                            <li class="bg-dark list-group-item"><a class="text-light" href="">One Piece est-il le
+                                                meilleur manga ?</a></li>
+                                        </ul>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Suggestion de comptes à suivre pour l'utilisateur -->
+                        <div class="tab-pane fade" id="pills-recommandation" role="tabpanel"
+                                aria-labelledby="pills-recommandation-tab">
+                            <div class="row">
+                                <div class="col-12 col-md-6 text-light mb-3 mb-md-0">
+                                    <div class="card bg-dark text-light">
+                                        <div class="card-header text-center">
+                                            Ces comptes pourraient vous intéresser
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <ul class="list-group">
+                                        <li class="bg-dark list-group-item text-center">Ces comptes pourraient vous intéresser</li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_36_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Clem</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_35_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Cedric</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_34_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Leya</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_33_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Caitlyn</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_1_40x40.jpg" alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jean</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    -->
+                                </div>
+
+                                <div class="col-12 col-md-6 text-light mb-3 mb-md-0">
+                                    <div class="card bg-dark text-light">
+                                        <div class="card-header text-center">
+                                            Ces comptes pourraient vous intéresser
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text d-flex">
+                                                <div>
+                                                    <img src="donnees/img/photos_profil/photo_37_40x40.jpg"
+                                                            alt="Photo de profil"
+                                                            class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Jo</a>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <ul class="list-group">
+                                        <li class="bg-dark list-group-item text-center">Voyez quels comptes suivent vos amis
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_23_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Irelia</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_32_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Arthur</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_28_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Keira</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_25_40x40.jpg"
+                                                         alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Amanda</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_4_40x40.jpg" alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Lé</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-dark list-group-item">
+                                            <div class="row">
+                                                <div class="col text-left">
+                                                    <img src="donnees/img/photos_profil/photo_3_40x40.jpg" alt="Photo de profil"
+                                                         class="rounded-circle"/>
+                                                    <a class="text-light ml-2" href="#">@ Hugo</a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zone suggestion de sondage -->
+                <div class="col-xl-2 d-none d-xl-block">
+                    <div class="sticky-top">
+                        <div class="card bg-dark text-light text-center">
+                            <div class="card-header">
+                                Suggestions pour vous
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <a class="card-text text-light" href="#">L'Etat en fait-il assez pour soutenir la culture ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">Regardez-vous des séries ou des documentaires sportifs ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">Les artistes doivent-ils forcément être enagagés ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">Craignez-vous que certains animaux disparaissent définitivement à cause de la chasse ?</a>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-8">
+                                        <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Zone suggestion d'utilisateur -->
+                        <div class="card bg-dark text-light text-center mt-3">
+                            <div class="card-header">
+                                Recommandations pour vous
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_18_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/>
+                                        <a class="text-light ml-2" href="#">@ Kamila</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_19_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/>
+                                        <a class="text-light ml-2" href="#">@ Idriss</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_20_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Lily</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_21_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/> <a class="text-light ml-2" href="#">@ May</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-8">
+                                        <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover({html: true});
+                $(".followEvent").each(function () {
+                    $(this).on("click", function () {
+                        $(this).text('Abonné');
+                    });
+                });
+            })
+        </script>
+    </body>
 
 </html>

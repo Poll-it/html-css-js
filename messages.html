@@ -1,687 +1,536 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page de messages privés">
-    <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
-                                social, échange, communication, expression, liberté, enquête, réaction">
-    <meta name="author" content="Lucie Laurent et Evana Zeimeth">
-    <title>Poll it</title>
-    <link rel="icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="css/fas.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/theme.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page de messages privés">
+        <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public, social, échange, communication, expression, liberté, enquête, réaction">
+        <meta name="author" content="Lucie Laurent et Evana Zeimeth">
+        <title>Poll it</title>
+        <link rel="icon" href="favicon.ico"/>
+        <link rel="stylesheet" href="css/fas.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body class="bg-primary">
-<div class="d-block d-lg-none">
-    <!-- Barre de navigation responsive -->
-    <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
-        <li class="nav-item">
-            <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
-                    class="d-none d-md-block">Accueil</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
-                <span class="d-none d-md-block">Notifications</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
-                    class="d-none d-md-block">Messages</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg"
-                                                                    alt="Photo de profil"
-                                                                    class="rounded-circle img-flui"/> <span
-                    class="d-none d-md-block">Profil</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
-                    class="d-none d-md-block">Réglages</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
-                    class="d-none d-md-block">A propos</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
-                    class="d-none d-md-block">Déconnexion</span></a>
-        </li>
-    </nav>
-</div>
-<div class="container-fluid mt-5">
-    <div class="row mx-lg-4">
-        <div class="col-lg-2 d-none d-xl-block">
-            <!-- Barre de navigation -->
-            <ul class="card nav flex-column p-3 sticky-top bg-dark">
-                <div class="align-self-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
-                            Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="profile.html"><img
-                                src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
-                                class="rounded-circle img-flui"/> Profil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
-                    </li>
-                </div>
-                <div class="text-center">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                        <label class="custom-control-label" for="customSwitch1"></label>
+    <body class="bg-primary">
+        <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="removeConv" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="removeConv1">Confirmation</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        Veux-tu vraiment supprimer cette conversation ?
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Supprimer
+                        </button>
                     </div>
                 </div>
-                <a class="text-center text-light" href="about.html">A propos</a>
-                <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
-
-            </ul>
-
-
+            </div>
         </div>
+        <div class="d-block d-lg-none">
+            <!-- Barre de navigation responsive -->
+            <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> <span
+                            class="d-none d-md-block">Accueil</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i>
+                        <span class="d-none d-md-block">Notifications</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> <span
+                            class="d-none d-md-block">Messages</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="profile.html"><img src="donnees/img/photos_profil/photo_1_20x20.jpg"
+                            alt="Photo de profil"
+                            class="rounded-circle img-flui"/> <span
+                            class="d-none d-md-block">Profil</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> <span
+                            class="d-none d-md-block">Réglages</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="about.html"><i class="fas fa-cog"></i> <span
+                            class="d-none d-md-block">A propos</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html"><i class="fas fa-sign-out-alt"></i> <span
+                            class="d-none d-md-block">Déconnexion</span></a>
+                </li>
+            </nav>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row mx-lg-4">
+                <div class="col-lg-2 d-none d-xl-block">
+                    <!-- Barre de navigation -->
+                    <ul class="card nav flex-column p-3 sticky-top bg-dark">
+                        <div class="align-self-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="notifications.html"><i class="fas fa-lightbulb"></i> Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="messages.html"><i class="fas fa-comments"></i> Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="profile.html"><img
+                                        src="donnees/img/photos_profil/photo_1_20x20.jpg" alt="Photo de profil"
+                                        class="rounded-circle img-flui"/> Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="settings.html"><i class="fas fa-cog"></i> Réglages</a>
+                            </li>
+                        </div>
+                        <div class="text-center">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1"></label>
+                            </div>
+                        </div>
+                        <a class="text-center text-light" href="about.html">A propos</a>
+                        <a class="text-right text-light" href="index.html"><i class="fas fa-sign-out-alt"></i></a>
 
-        <div class="col-lg-12 col-xl-8">
-            <!-- Barre de recherche -->
-            <form autocomplete="off" method="POST" action="#">
-                <div class="form-group has-search">
-                    <span class="fas fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control bg-dark text-light"
-                           placeholder="Recherche quelqu'un ou quelque chose">
+                    </ul>
+
+
                 </div>
-            </form>
-            <!-- Zone des messages -->
-            <div class="row m-0 bg-dark">
-                <div class="col-3">
-                    <div class="m-3 align-items-center">
-                        <img src="donnees/img/photos_profil/photo_1_60x60.jpg" alt="Photo de profil"
-                             class="rounded-circle"/>
-                        <a class="pl-2 text-light" href="#">@Karla</a>
-                    </div>
+
+                <div class="col-lg-12 col-xl-8">
+                    <!-- Barre de recherche -->
                     <form autocomplete="off" method="POST" action="#">
                         <div class="form-group has-search">
                             <span class="fas fa-search form-control-feedback"></span>
-                            <input type="text" class="form-control bg-primary text-light" placeholder="Recherche">
+                            <input type="text" class="form-control bg-dark text-light"
+                                    placeholder="Recherche quelqu'un ou quelque chose">
                         </div>
                     </form>
-                    <hr>
-                    <!-- Liste des interlocuteurs -->
-                    <div class="container-scroll">
-                        <div class="list-group" id="list" role="tablist">
-                            <a class="list-group-item list-group-item-action bg-dark text-light active"
-                               data-toggle="list" href="#list-1" role="tab">
-                                <div class="align-items-center pl-1">
-                                    <img src="donnees/img/photos_profil/photo_38_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <span class="pl-3">Melanie</span>
+                    <!-- Zone des messages -->
+                    <div class="row m-0 bg-dark">
+                        <div class="col-3">
+                            <div class="m-3">
+                                <img src="donnees/img/photos_profil/photo_1_60x60.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="d-none d-md-inline-flex pl-2 text-light" href="#">@Karla</a>
+                            </div>
+                            <form autocomplete="off" method="POST" action="#" class="d-none d-xl-inline-flex">
+                                <div class="form-group has-search">
+                                    <span class="fas fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control bg-primary text-light" placeholder="Recherche">
                                 </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
-                               href="#list-2" role="tab">
-                                <div class="align-items-center pl-1">
-                                    <img src="donnees/img/photos_profil/photo_40_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <span class="pl-3">Tahani</span>
+                            </form>
+                            <hr>
+                            <!-- Liste des interlocuteurs -->
+                            <div class="container-scroll">
+                                <div class="list-group" id="list" role="tablist">
+                                    <a class="list-group-item list-group-item-action bg-dark text-light active" data-toggle="list" href="#list-1" role="tab">
+                                        <div class="align-items-center pl-1">
+                                            <img src="donnees/img/photos_profil/photo_38_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <span class="pl-3 d-none d-md-inline-flex">Melanie</span>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                                            href="#list-2" role="tab">
+                                        <div class="align-items-center pl-1">
+                                            <img src="donnees/img/photos_profil/photo_40_40x40.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/> <span class="pl-3 d-none d-md-inline-flex">Tahani</span>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                                            href="#list-3" role="tab">
+                                        <div class="align-items-center pl-1">
+                                            <img src="donnees/img/photos_profil/photo_39_40x40.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/> <span class="pl-3 d-none d-md-inline-flex">Jax</span>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                                            href="#list-4" role="tab">
+                                        <div class="align-items-center pl-1">
+                                            <img src="donnees/img/photos_profil/photo_41_40x40.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/> <span class="pl-3 d-none d-md-inline-flex">Mathéo</span>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
+                                            href="#list-5" role="tab">
+                                        <div class="align-items-center pl-1">
+                                            <img src="donnees/img/photos_profil/photo_42_40x40.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/> <span class="pl-3 d-none d-md-inline-flex">Julie</span>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
-                               href="#list-3" role="tab">
-                                <div class="align-items-center pl-1">
-                                    <img src="donnees/img/photos_profil/photo_39_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <span class="pl-3">Jax</span>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="tab-content" id="nav-tabContent">
+                                <!-- Conversation 1 -->
+                                <div class="tab-pane fade show active text-light" id="list-1" role="tabpanel">
+                                    <div class="m-3 row justify-content-between align-items-center">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_38_50x50.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/>
+                                            <a class="pl-2 text-light" href="#">Melanie</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
+                                                    data-target="#remove"><i
+                                                    class="fas fa-trash-alt text-light"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container-scroll pl-5">
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_38_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_38_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
-                               href="#list-4" role="tab">
-                                <div class="align-items-center pl-1">
-                                    <img src="donnees/img/photos_profil/photo_41_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <span class="pl-3">Mathéo</span>
+                                <!-- Conversation 2 -->
+                                <div class="tab-pane fade text-light" id="list-2" role="tabpanel">
+                                    <div class="m-3 row justify-content-between align-items-center">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_40_50x50.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/>
+                                            <a class="pl-2 text-light" href="#">Tahani</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
+                                                    data-target="#remove"><i
+                                                    class="fas fa-trash-alt text-light"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container-scroll pl-5">
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action bg-dark text-light" data-toggle="list"
-                               href="#list-5" role="tab">
-                                <div class="align-items-center pl-1">
-                                    <img src="donnees/img/photos_profil/photo_42_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <span class="pl-3">Julie</span>
+                                <!-- Conversation 3 -->
+                                <div class="tab-pane fade text-light" id="list-3" role="tabpanel">
+                                    <div class="m-3 row justify-content-between align-items-center">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_39_50x50.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/> <a class="pl-2 text-light" href="#">Jax</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
+                                                    data-target="#remove"><i
+                                                    class="fas fa-trash-alt text-light"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container-scroll pl-5">
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_39_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_39_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                                <!-- Conversation 4 -->
+                                <div class="tab-pane fade text-light" id="list-4" role="tabpanel">
+                                    <div class="m-3 row justify-content-between align-items-center">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_41_40x40.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/>
+                                            <a class="pl-2 text-light" href="#">Mathéo</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
+                                                    data-target="#remove"><i
+                                                    class="fas fa-trash-alt text-light"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container-scroll pl-5">
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Donec lacinia congue felis in faucibus. In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Conversation 5 -->
+                                <div class="tab-pane fade text-light" id="list-5" role="tabpanel">
+                                    <div class="m-3 row justify-content-between align-items-center">
+                                        <div>
+                                            <img src="donnees/img/photos_profil/photo_42_50x50.jpg" alt="Photo de profil"
+                                                    class="rounded-circle"/>
+                                            <a class="pl-2 text-light" href="#">Julie</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
+                                                    data-target="#remove"><i
+                                                    class="fas fa-trash-alt text-light"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container-scroll pl-5">
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in gravida nulla.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
+                                                    class="rounded-circle align-self-start ml-3"
+                                                    alt="image">
+                                        </div>
+
+                                        <div class="media size-message">
+                                            <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
+                                                    class="rounded-circle align-self-start mr-3"
+                                                    alt="image">
+                                            <div class="media-body text-light">
+                                                <p class="rounded bg-primary p-3 text-justify">Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- Zone de saisie de texte -->
+                                <div class="d-flex justify-content-end mb-3 mb-xl-3">
+                                    <a class="btn btn-primary text-light" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<a href='#'>😄</a><a href='#'>😍</a><a href='#'>🤔</a><a href='#'>😭</a><a href='#'>😠</a><a href='#'>❤</a>"><i class="fas fa-smile"></i></a>
+                                    <span class="btn btn-primary btn-file text-light mx-2">
+                                        <i class="fas fa-link"></i><input type="file">
+                                    </span>
+                                    <div class="flex-fill">
+                                        <form autocomplete="off" method="POST" action="#">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control bg-primary text-light" placeholder="Tape ton message">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-secondary" type="submit">Envoyer</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-9">
-                    <div class="tab-content" id="nav-tabContent">
-                        <!-- Conversation 1 -->
-                        <div class="tab-pane fade show active text-light" id="list-1" role="tabpanel">
-                            <div class="m-3 row justify-content-between align-items-center">
-                                <div>
-                                    <img src="donnees/img/photos_profil/photo_38_50x50.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <a class="pl-2 text-light" href="#">Melanie</a>
-                                </div>
-                                <div>
-                                    <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
-                                       data-target="#remove1"><i
-                                            class="fas fa-trash-alt text-light"></i></a>
-                                </div>
-                                <div class="modal fade" id="remove1" tabindex="-1" role="dialog"
-                                     aria-labelledby="removeConv1" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content bg-dark text-light">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="removeConv1">Confirmation</h5>
-                                                <button type="button" class="close text-light" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                Veux-tu vraiment supprimer cette conversation ?
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Zone de suggestion de sondage -->
+                <div class="col-xl-2 d-none d-xl-block">
+                    <div class="sticky-top">
+                        <div class="card bg-dark text-light text-center">
+                            <div class="card-header">
+                                Suggestions pour vous
                             </div>
-                            <hr>
-                            <div class="container-scroll pl-5">
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_38_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
-                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
-                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                            Donec lacinia congue felis in faucibus.</p>
+                            <div class="card-body">
+                                <p>
+                                    <a class="card-text text-light" href="#">La France en fait-elle assez pour développer les énergies renouvelables ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">Le cloud gaming va-t-il remplacer les jeux sur console ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">La plateforme Disney + peut-elle rivaliser avec Netflix ?</a>
+                                </p>
+                                <hr>
+                                <p>
+                                    <a class="card-text text-light" href="#">Attendez-vous avec impatience la sortie de la PlayStation 5 ?</a>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-8">
+                                        <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
                                     </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_38_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
-                                            gravida nulla.</p>
-                                    </div>
+                                    <div class="col"></div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Conversation 2 -->
-                        <div class="tab-pane fade text-light" id="list-2" role="tabpanel">
-                            <div class="m-3 row justify-content-between align-items-center">
-                                <div>
-                                    <img src="donnees/img/photos_profil/photo_40_50x50.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <a class="pl-2 text-light" href="#">Tahani</a>
-                                </div>
-                                <div>
-                                    <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
-                                       data-target="#remove2"><i
-                                            class="fas fa-trash-alt text-light"></i></a>
-                                </div>
-                                <div class="modal fade" id="remove2" tabindex="-1" role="dialog"
-                                     aria-labelledby="removeConv2" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content bg-dark text-light">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="removeConv2">Confirmation</h5>
-                                                <button type="button" class="close text-light" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                Veux-tu vraiment supprimer cette conversation ?
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Zone suggestion d'utilisateur -->
+                        <div class="card bg-dark text-light text-center mt-3">
+                            <div class="card-header">
+                                Recommandations pour vous
                             </div>
-                            <hr>
-                            <div class="container-scroll pl-5">
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_22_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Logic</a>
                                     </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Conversation 3 -->
-                        <div class="tab-pane fade text-light" id="list-3" role="tabpanel">
-                            <div class="m-3 row justify-content-between align-items-center">
-                                <div>
-                                    <img src="donnees/img/photos_profil/photo_39_50x50.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <a class="pl-2 text-light" href="#">Jax</a>
-                                </div>
-                                <div>
-                                    <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
-                                       data-target="#remove3"><i
-                                            class="fas fa-trash-alt text-light"></i></a>
-                                </div>
-                                <div class="modal fade" id="remove3" tabindex="-1" role="dialog"
-                                     aria-labelledby="removeConv3" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content bg-dark text-light">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="removeConv3">Confirmation</h5>
-                                                <button type="button" class="close text-light" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                Veux-tu vraiment supprimer cette conversation ?
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="container-scroll pl-5">
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_39_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
-                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
-                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                            Donec lacinia congue felis in faucibus.</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_23_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/>
+                                        <a class="text-light ml-2" href="#">@ Irelia</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                     </div>
                                 </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_24_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Urgot</a>
                                     </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_39_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
-                                            gravida nulla.</p>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Conversation 4 -->
-                        <div class="tab-pane fade text-light" id="list-4" role="tabpanel">
-                            <div class="m-3 row justify-content-between align-items-center">
-                                <div>
-                                    <img src="donnees/img/photos_profil/photo_41_40x40.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <a class="pl-2 text-light" href="#">Mathéo</a>
-                                </div>
-                                <div>
-                                    <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
-                                       data-target="#remove4"><i
-                                            class="fas fa-trash-alt text-light"></i></a>
-                                </div>
-                                <div class="modal fade" id="remove4" tabindex="-1" role="dialog"
-                                     aria-labelledby="removeConv4" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content bg-dark text-light">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="removeConv4">Confirmation</h5>
-                                                <button type="button" class="close text-light" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                Veux-tu vraiment supprimer cette conversation ?
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <img src="donnees/img/photos_profil/photo_25_40x40.jpg" alt="Photo de profil"
+                                                class="rounded-circle"/>
+                                        <a class="text-light ml-2" href="#">@ Amanda</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="container-scroll pl-5">
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
-                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
-                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                            Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
-                                            gravida nulla.</p>
-                                    </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_41_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet.</p>
-                                    </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus. Donec lacinia
-                                            congue felis in faucibus. In gravida nulla. Nulla vel metus scelerisque ante
-                                            sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
-                                            turpis.</p>
-                                    </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Conversation 5 -->
-                        <div class="tab-pane fade text-light" id="list-5" role="tabpanel">
-                            <div class="m-3 row justify-content-between align-items-center">
-                                <div>
-                                    <img src="donnees/img/photos_profil/photo_42_50x50.jpg" alt="Photo de profil"
-                                         class="rounded-circle"/>
-                                    <a class="pl-2 text-light" href="#">Julie</a>
-                                </div>
-                                <div>
-                                    <a class="btn btn-primary align-self-right" href="#" data-toggle="modal"
-                                       data-target="#remove5"><i
-                                            class="fas fa-trash-alt text-light"></i></a>
-                                </div>
-                                <div class="modal fade" id="remove5" tabindex="-1" role="dialog"
-                                     aria-labelledby="removeConv5" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content bg-dark text-light">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="removeConv5">Confirmation</h5>
-                                                <button type="button" class="close text-light" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                Veux-tu vraiment supprimer cette conversation ?
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container-scroll pl-5">
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">In gravida nulla. Nulla vel metus
-                                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at,
-                                            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                            Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Cras sit amet nibh libero, in
-                                            gravida nulla.</p>
-                                    </div>
-                                </div>
-
-                                <div class="media size-message">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-secondary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                    <img src="donnees/img/photos_profil/photo_5_50x50.jpg"
-                                         class="rounded-circle align-self-start ml-3"
-                                         alt="image">
-                                </div>
-
-                                <div class="media size-message">
-                                    <img src="donnees/img/photos_profil/photo_42_50x50.jpg"
-                                         class="rounded-circle align-self-start mr-3"
-                                         alt="image">
-                                    <div class="media-body text-light">
-                                        <p class="rounded bg-primary p-3 text-justify">Vestibulum in vulputate at,
-                                            tempus viverra turpis. Donec lacinia congue felis in faucibus. Vestibulum in
-                                            vulputate at, tempus viverra turpis. Donec lacinia congue felis in faucibus.
-                                            Vestibulum in vulputate at, tempus viverra turpis. Donec lacinia congue
-                                            felis in faucibus. Vestibulum in vulputate at, tempus viverra turpis. Donec
-                                            lacinia congue felis in faucibus. Vestibulum in vulputate at, tempus viverra
-                                            turpis. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <!-- Zone de saisie de texte -->
-                        <div class="row m-3 d-flex justify-content-start">
-                            <div class="align-self-start mr-2">
-                                <a class="btn btn-primary text-light" href="#" data-container="body"
-                                   data-toggle="popover"
-                                   data-placement="bottom" data-content="
-                                        <a href='#'>😄</a>
-                                        <a href='#'>😍</a>
-                                        <a href='#'>🤔</a>
-                                        <a href='#'>😭</a>
-                                        <a href='#'>😠</a>
-                                        <a href='#'>❤</a>
-                                    "><i class="fas fa-smile"></i></a>
-                                <span class="btn btn-primary btn-file text-light">
-                                <i class="fas fa-link"></i><input type="file">
-                            </span>
-                            </div>
-                            <div class="flex-fill">
-                                <form autocomplete="off" method="POST" action="#">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control bg-primary text-light"
-                                               placeholder="Tape ton message">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-secondary" type="submit">Envoyer</button>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Zone de suggestion de sondage -->
-        <div class="col-xl-2 d-none d-xl-block">
-            <div class="sticky-top">
-                <div class="card bg-dark text-light text-center">
-                    <div class="card-header">
-                        Suggestions pour vous
-                    </div>
-                    <div class="card-body">
-                        <p>
-                            <a class="card-text text-light" href="#">La France en fait-elle assez pour développer les
-                                énergies renouvelables ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">Le cloud gaming va-t-il remplacer les jeux sur
-                                console ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">La plateforme Disney + peut-elle rivaliser avec
-                                Netflix ?</a>
-                        </p>
-                        <hr>
-                        <p>
-                            <a class="card-text text-light" href="#">Attendez-vous avec impatience la sortie de la
-                                PlayStation 5 ?</a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-8">
-                                <a href="notifications.html" class="btn btn-block btn-secondary">Voir plus</a>
-                            </div>
-                            <div class="col"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Zone suggestion d'utilisateur -->
-                <div class="card bg-dark text-light text-center mt-3">
-                    <div class="card-header">
-                        Recommandations pour vous
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_22_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Logic</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_23_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Irelia</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_24_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Urgot</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col text-left">
-                                <img src="donnees/img/photos_profil/photo_25_40x40.jpg" alt="Photo de profil"
-                                     class="rounded-circle"/>
-                                <a class="text-light ml-2" href="#">@ Amanda</a>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({html: true});
-        $(".followEvent").each(function () {
-            $(this).on("click", function () {
-                $(this).text('Abonné');
-            });
-        });
-    })
-</script>
-</body>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover({html: true});
+                $(".followEvent").each(function () {
+                    $(this).on("click", function () {
+                        $(this).text('Abonné');
+                    });
+                });
+            })
+        </script>
+    </body>
 </html>

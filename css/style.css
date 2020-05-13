@@ -1,5 +1,5 @@
 a {
-    text-decoration: none!important;
+    text-decoration: none!important
 }
 
 .form-control {
@@ -14,15 +14,15 @@ a {
 
 .sticky-top {
     top: 50px;
-    margin-bottom: 5%;
+    margin-bottom: 5%
 }
 
 textarea {
-    resize: none!important;
+    resize: none!important
 }
 
 .has-search .form-control {
-    padding-left: 2.375rem;
+    padding-left: 2.375rem
 }
 
 .has-search .form-control-feedback {
@@ -34,26 +34,26 @@ textarea {
     line-height: 2.375rem;
     text-align: center;
     pointer-events: none;
-    color: #aaa;
+    color: #aaa
 }
 
 .nav-link.active {
-    color: white!important;
-    background-color: #8862e0!important;
+    color: #fff!important;
+    background-color: #8862e0!important
 }
 
 .progress {
-    background-color: #aaa!important;
+    background-color: #aaa!important
 }
 
 .profile {
-    color: white;
-    text-align: center;
+    color: #fff;
+    text-align: center
 }
 
 .profile .wrapper {
     width: 70%;
-    margin: -100px auto auto;
+    margin: -100px auto auto
 }
 
 .profile img {
@@ -61,80 +61,81 @@ textarea {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 4px solid #fff;
+    border: 4px solid #fff
 }
 
 .background {
     height: 30%;
     width: 100%;
-    background-size: cover;
+    background-size: cover
 }
 
 a.list-group-item {
     position: relative;
     display: block;
-    padding: 1rem 0.75rem!important;
+    padding: 1rem .75rem!important;
     background-color: inherit!important;
-    border: none!important;
+    border: 0!important
 }
 
-.list-group-item.active, a.bg-dark:hover, a.bg-dark:focus {
-    background-color: #1c1e2f!important;
+.list-group-item.active,a.bg-dark:hover,a.bg-dark:focus {
+    background-color: #1c1e2f!important
 }
 
 .container-scroll {
     overflow: auto!important;
-    height: 400px;
+    height: 400px
 }
 
 .size-message {
-    width: 98%;
+    width: 98%
 }
 
 .input-group-text {
-    border: none!important;
+    border: 0!important
 }
 
 .dropdown-menu {
-    z-index: auto!important;
+    z-index: auto!important
 }
 
 .popover-body {
-    background-color: #222437!important;
+    background-color: #222437!important
 }
 
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus,.btn-primary.focus {
     color: inherit!important;
     background-color: #1c1e2f!important;
     border-color: #1c1e2f!important;
-    box-shadow: none!important;
+    box-shadow: none!important
 }
 
-.btn-secondary:focus, .btn-secondary.focus {
+.btn-secondary:focus,.btn-secondary.focus {
     color: #fff;
     background-color: #8862e0!important;
     border-color: #8862e0!important;
-    box-shadow: none!important;
+    box-shadow: none!important
 }
 
 .custom-file-label {
     color: #8862e0!important;
     background-color: #1c1e2f!important;
-    border: #1c1e2f!important;
+    border: #1c1e2f!important
 }
 
-.likeEvent, .shareEvent {
-    cursor: pointer;
+.likeEvent,.shareEvent {
+    cursor: pointer
 }
 
 .modal-footer {
-    text-align: left!important;
+    text-align: left!important
 }
 
 .btn-file {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
+
 .btn-file input[type=file] {
     position: absolute;
     top: 0;
@@ -145,41 +146,46 @@ a.list-group-item {
     text-align: right;
     filter: alpha(opacity=0);
     opacity: 0;
-    outline: none;
+    outline: 0;
     cursor: inherit;
-    display: block;
+    display: block
 }
 
-.btn-link:hover, .btn-link:focus, .btn-link.focus {
+.btn-link:hover,.btn-link:focus,.btn-link.focus {
     color: #0056b3;
-    text-decoration: none!important;
+    text-decoration: none!important
 }
 
 .card {
-    border: none!important;
+    border: 0!important
 }
 
 .modal-header {
-    border-bottom: 1px solid #1c1e2f!important;
+    border-bottom: 1px solid #1c1e2f!important
 }
 
 .modal-footer {
-    border-top: 1px solid #1c1e2f!important;
+    border-top: 1px solid #1c1e2f!important
 }
 
-
-.btn-info:hover, .btn-info:focus, .btn-info.focus {
+.btn-info:hover,.btn-info:focus,.btn-info.focus {
     color: #fff;
     background-color: #138496;
-    box-shadow: none!important;
+    box-shadow: none!important
 }
 
-
-.custom-control-input:checked ~ .custom-control-label::before {
-    background-color: #8862e0!important;
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #8862e0!important
 }
 
 .custom-file-label {
-    color: white!important;
+    color: #fff!important
 }
 
+.img-fluid {
+    max-width: 50%
+}
+
+#img-back {
+    max-width: 100% !important;%
+}

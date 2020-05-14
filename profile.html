@@ -6,7 +6,7 @@
         <meta name="description" content="Page de profl">
         <meta name="keywords" content="Poll it, sondage, créer, participer, opinion, public,
                                     social, échange, communication, expression, liberté, enquête, réaction">
-        <meta name="author" content="Lucie Laurent et Evana Zeimeth">
+        <meta name="author" content="Lucie Laurent">
         <title>Poll it</title>
         <link rel="icon" href="favicon.ico"/>
         <link rel="stylesheet" href="css/fas.min.css">
@@ -16,6 +16,49 @@
     </head>
 
     <body class="bg-primary">
+        <!-- Zone pour determiner les choix de ses sondages -->
+        <div class="modal fade" id="btn-file" tabindex="-1" role="dialog" aria-labelledby="modalChoice" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalChoice">Quels choix pour votre sondage ?</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form m-3" id="choice">
+                            <div class="alert alert-danger" id="maxChoice" role="alert" style="display: none;">
+                                Vous ne pouvez pas ajouter plus de 5 choix.
+                            </div>
+                            <label class="pl-1" for="choice1">Choix</label>
+                            <div class="row align-items-end">
+                                <div class="col-10 pr-0">
+                                    <input type="text" class="mt-2 form-control bg-primary text-light" id="choice1" placeholder="Oui">
+                                </div>
+                                <div class="col-2 pl-1">
+                                    <a class="btn btn-primary text-light" id="removeChoice1"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="row align-items-end">
+                                <div class="col-10 pr-0">
+                                    <input type="text" class="mt-2 form-control bg-primary text-light" id="choice2" placeholder="Non">
+                                </div>
+                                <div class="col-2 pl-1">
+                                    <a class="btn btn-primary text-light" id="removeChoice2"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="text-right">
+                            <button type="button" class="btn btn-secondary mr-2" id="plusEvent">Ajouter un choix</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Enregistrer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="d-block d-xl-none">
             <!-- Barre de navigation responsive -->
             <nav class="navbar nav justify-content-center navbar-dark bg-dark navbar-expand-sm fixed-bottom">
@@ -44,7 +87,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="about.html">
-                        <i class="fas fa-cog"></i> <span class="d-none d-md-block">A propos</span>
+                        <i class="fas fa-info"></i> <span class="d-none d-md-block">A propos</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -153,124 +196,40 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="sondage" role="tabpanel" aria-labelledby="pills-home-tab">
                         <!-- Zone pour créer son propre sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-primary">
+                        <div class="card bg-dark text-primary mt-3 mb-3">
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-1">
-                                        <img src="donnees/img/photos_profil/photo_1_80x80.jpg" alt="Photo de profil"
-                                             class="rounded-circle"/>
+                                <div class="d-flex">
+                                    <div class="mr-3">
+                                        <img src="donnees/img/photos_profil/photo_1_80x80.jpg" alt="Photo de profil" class="rounded-circle"/>
                                     </div>
-                                    <div class="col-11">
-                                <textarea class="form-control bg-primary text-light" id="exampleFormControlTextarea1"
-                                          rows="3" placeholder="Tu veux sonder quelque chose ?"></textarea>
+                                    <div class="flex-grow-1 bd-highlight">
+                                        <textarea class="form-control bg-primary text-light" rows="3" placeholder="Tu veux sonder quelque chose ?"></textarea>
                                     </div>
                                 </div>
-                                <div class="row mt-3">
-                                    <div class="col-9">
-                                    </div>
-                                    <div class="col">
-                                        <a class="btn btn-primary text-light" href="#" data-container="body"
-                                           data-toggle="popover"
-                                           data-placement="bottom" data-content="
-                                            <a href='#'>😄</a>
-                                            <a href='#'>😍</a>
-                                            <a href='#'>🤔</a>
-                                            <a href='#'>😭</a>
-                                            <a href='#'>😠</a>
-                                            <a href='#'>❤</a>
-                                        "><i class="fas fa-smile"></i></a>
-                                        <span class="btn btn-primary btn-file text-light">
+                                <div class="d-flex justify-content-end mt-3">
+                                    <button class="btn btn-primary text-light" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<a href='#'>😄</a><a href='#'>😍</a><a href='#'>🤔</a><a href='#'>😭</a><a href='#'>😠</a><a href='#'>❤</a>"><i class="fas fa-smile"></i></button>
+                                    <span class="btn btn-primary btn-file text-light">
                                     <i class="fas fa-link"></i><input type="file">
                                 </span>
-                                        <a class="btn btn-primary text-light ml-3" data-toggle="modal"
-                                           data-target="#btn-file"><i
-                                                class="fas fa-plus"></i></a>
-                                        <button class="btn btn-secondary ml-3" type="submit">Envoyer</button>
-                                    </div>
-                                    <!-- Zone pour determiner les choix de ses sondages -->
-                                    <div class="modal fade" id="btn-file" tabindex="-1" role="dialog"
-                                         aria-labelledby="modalFile"
-                                         aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content bg-dark text-light">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="modalFile">Quels choix pour votre sondage
-                                                        ?</h5>
-                                                    <button type="button" class="close text-light" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form m-3" id="choice">
-                                                        <div class="alert alert-danger" id="maxChoice" role="alert"
-                                                             style="display: none;">
-                                                            Vous ne pouvez pas ajouter plus de 5 choix.
-                                                        </div>
-                                                        <label class="pl-1" for="choice1">Choix</label>
-                                                        <div class="row align-items-end">
-                                                            <div class="col-10 pr-0">
-                                                                <input type="text"
-                                                                       class="mt-2 form-control bg-primary text-light"
-                                                                       id="choice1" placeholder="Oui">
-                                                            </div>
-                                                            <div class="col-2 pl-1">
-                                                                <a class="btn btn-primary text-light" id="removeChoice1"><i
-                                                                        class="fas fa-trash-alt"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-end">
-                                                            <div class="col-10 pr-0">
-                                                                <input type="text"
-                                                                       class="mt-2 form-control bg-primary text-light"
-                                                                       id="choice2" placeholder="Non">
-                                                            </div>
-                                                            <div class="col-2 pl-1">
-                                                                <a class="btn btn-primary text-light" id="removeChoice2"><i
-                                                                        class="fas fa-trash-alt"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="modal-footer">
-                                                    <div class="text-right">
-                                                        <button type="button" class="btn btn-secondary mr-2" id="plusEvent">
-                                                            Ajouter
-                                                            un choix
-                                                        </button>
-                                                        <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">
-                                                            Enregistrer
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <button class="btn btn-primary text-light ml-3" data-toggle="modal" data-target="#btn-file"><i class="fas fa-plus"></i></button>
+                                    <button class="btn btn-secondary ml-3" type="submit">Envoyer</button>
                                 </div>
                             </div>
                         </div>
                         <!-- Un sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-light">
+                        <div class="card bg-dark text-light mt-3 mb-3">
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <div class="ml-2 row align-items-center">
-                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="pl-3 text-light" href="#">@ Karla</a>
-                                            <p class="pl-3 mb-0 text-light">-</p>
-                                            <p class="pl-3 mb-0 text-light">27m</p>
+                                        <div class="row align-items-center ml-2">
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-3" href="#">@ Karla</a>
+                                            <span class="px-3 text-light">-</span>
+                                            <span class="text-light">27m</span>
                                         </div>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
-                                                data-toggle="popover" data-placement="right" data-content="
-                                            <a href='#' class='row m-2 text-light'>Masquer</a>
-                                            <a href='#' class='row m-2 text-light'>Signaler</a>
-                                            <a href='#' class='row m-2 text-light'>Supprimer</a>
-                                        ">
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='#' class='row m-2 text-light'>Masquer</a><a href='#' class='row m-2 text-light'>Signaler</a><a href='#' class='row m-2 text-light'>Supprimer</a>">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                     </div>
@@ -282,39 +241,30 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="col-12">
-                                                <p class="lead">Achetez-vous encore des CD ou des vinyles pour écouter de la musique ?
-                                                    ?</p>
+                                                <p class="lead">Achetez-vous encore des CD ou des vinyles pour écouter de la musique ?</p>
                                             </div>
                                             <div class="col-12 mt-3">
                                                 <div class="row">
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio1Poll1" name="poll1"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio1Poll1">Souvent</label>
+                                                            <input type="radio" id="Radio1Poll1" name="poll1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio1Poll1">Souvent</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 28%" aria-valuenow="28" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 48%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio2Poll1" name="poll1"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio2Poll1">Rarement</label>
+                                                            <input type="radio" id="Radio2Poll1" name="poll1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio2Poll1">Rarement</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 72%" aria-valuenow="72" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 52%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -324,50 +274,44 @@
                                     <div class="col-auto align-self-end">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i
-                                                        class="fas fa-lightbulb likeEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-lightbulb likeEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i class="fas fa-share shareEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-share shareEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light" href="comments.html"><i
-                                                        class="fas fa-comment"></i></a>
+                                                <a class="nav-link text-light" href="comments.html">
+                                                    <i class="fas fa-comment"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#" class="nav-link text-light" data-container="body"
-                                                   data-toggle="popover"
-                                                   data-placement="right" data-content="
-                                            <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
-                                            <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
-                                            <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
-                                        "><i class="fab fa-telegram-plane"></i></a>
+                                                <a href="#" class="nav-link text-light" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='https://www.facebook.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a><a href='https://twitter.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-twitter'></i></a><a href='#' target='_blank' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>">
+                                                    <i class="fab fa-telegram-plane"></i>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- un sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-light">
+                        <!-- Un sondage -->
+                        <div class="card bg-dark text-light mt-3 mb-3">
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <div class="ml-2 row align-items-center">
-                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="pl-3 text-light" href="#">@ Karla</a>
-                                            <p class="pl-3 mb-0 text-light">-</p>
-                                            <p class="pl-3 mb-0 text-light">1h</p>
+                                        <div class="row align-items-center ml-2">
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-3" href="#">@ Karla</a>
+                                            <span class="px-3 text-light">-</span>
+                                            <span class="text-light">1h</span>
                                         </div>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
-                                                data-toggle="popover" data-placement="right" data-content="
-                                            <a href='#' class='row m-2 text-light'>Masquer</a>
-                                            <a href='#' class='row m-2 text-light'>Signaler</a>
-                                            <a href='#' class='row m-2 text-light'>Supprimer</a>
-                                        ">
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='#' class='row m-2 text-light'>Masquer</a><a href='#' class='row m-2 text-light'>Signaler</a><a href='#' class='row m-2 text-light'>Supprimer</a>">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                     </div>
@@ -383,33 +327,26 @@
                                             </div>
                                             <div class="col-12 mt-3">
                                                 <div class="row">
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio1Poll2" name="poll2"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label" for="Radio1Poll2">Pas assez</label>
+                                                            <input type="radio" id="Radio1Poll2" name="poll1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio1Poll1">Pas assez</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 63%" aria-valuenow="63" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 48%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio2Poll2" name="poll2"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio2Poll2">Ca peut aller</label>
+                                                            <input type="radio" id="Radio2Poll2" name="poll2" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio2Poll1">Ca peut aller</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 37%" aria-valuenow="37" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 52%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -419,24 +356,24 @@
                                     <div class="col-auto align-self-end">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i
-                                                        class="fas fa-lightbulb likeEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-lightbulb likeEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i class="fas fa-share shareEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-share shareEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light" href="comments.html"><i
-                                                        class="fas fa-comment"></i></a>
+                                                <a class="nav-link text-light" href="comments.html">
+                                                    <i class="fas fa-comment"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#" class="nav-link text-light" data-container="body"
-                                                   data-toggle="popover"
-                                                   data-placement="right" data-content="
-                                            <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
-                                            <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
-                                            <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
-                                        "><i class="fab fa-telegram-plane"></i></a>
+                                                <a href="#" class="nav-link text-light" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='https://www.facebook.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a><a href='https://twitter.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-twitter'></i></a><a href='#' target='_blank' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>">
+                                                    <i class="fab fa-telegram-plane"></i>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -444,25 +381,19 @@
                             </div>
                         </div>
                         <!-- Un sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-light">
+                        <div class="card bg-dark text-light mt-3 mb-3">
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <div class="ml-2 row align-items-center">
-                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="pl-3 text-light" href="#">@ Karla</a>
-                                            <p class="pl-3 mb-0 text-light">-</p>
-                                            <p class="pl-3 mb-0 text-light">20h</p>
+                                        <div class="row align-items-center ml-2">
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-3" href="#">@ Karla</a>
+                                            <span class="px-3 text-light">-</span>
+                                            <span class="text-light">22h</span>
                                         </div>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
-                                                data-toggle="popover" data-placement="right" data-content="
-                                            <a href='#' class='row m-2 text-light'>Masquer</a>
-                                            <a href='#' class='row m-2 text-light'>Signaler</a>
-                                            <a href='#' class='row m-2 text-light'>Supprimer</a>
-                                        ">
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='#' class='row m-2 text-light'>Masquer</a><a href='#' class='row m-2 text-light'>Signaler</a><a href='#' class='row m-2 text-light'>Supprimer</a>">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                     </div>
@@ -478,33 +409,26 @@
                                             </div>
                                             <div class="col-12 mt-3">
                                                 <div class="row">
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio1Poll3" name="poll3"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label" for="Radio1Poll3">De loin</label>
+                                                            <input type="radio" id="Radio1Poll3" name="poll1" class="custom-control-input">
+                                                                <label class="custom-control-label" for="Radio1Poll1">De loin</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 55%" aria-valuenow="55" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 48%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio2Poll3" name="poll3"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label" for="Radio2Poll3">Pas
-                                                                du tout</label>
+                                                            <input type="radio" id="Radio2Poll3" name="poll2" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio2Poll1">Pas du tout</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 45%" aria-valuenow="45" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 52%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -514,24 +438,24 @@
                                     <div class="col-auto align-self-end">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i
-                                                        class="fas fa-lightbulb likeEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-lightbulb likeEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i class="fas fa-share shareEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-share shareEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light" href="comments.html"><i
-                                                        class="fas fa-comment"></i></a>
+                                                <a class="nav-link text-light" href="comments.html">
+                                                    <i class="fas fa-comment"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#" class="nav-link text-light" data-container="body"
-                                                   data-toggle="popover"
-                                                   data-placement="right" data-content="
-                                            <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
-                                            <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
-                                            <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
-                                        "><i class="fab fa-telegram-plane"></i></a>
+                                                <a href="#" class="nav-link text-light" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='https://www.facebook.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a><a href='https://twitter.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-twitter'></i></a><a href='#' target='_blank' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>">
+                                                    <i class="fab fa-telegram-plane"></i>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -539,25 +463,19 @@
                             </div>
                         </div>
                         <!-- Un sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-light">
+                        <div class="card bg-dark text-light mt-3 mb-3">
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <div class="ml-2 row align-items-center">
-                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="pl-3 text-light" href="#">@ Karla</a>
-                                            <p class="pl-3 mb-0 text-light">-</p>
-                                            <p class="pl-3 mb-0 text-light">1j</p>
+                                        <div class="row align-items-center ml-2">
+                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil" class="rounded-circle"/>
+                                            <a class="text-light pl-3" href="#">@ Karla</a>
+                                            <span class="px-3 text-light">-</span>
+                                            <span class="text-light">22h</span>
                                         </div>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
-                                                data-toggle="popover" data-placement="right" data-content="
-                                            <a href='#' class='row m-2 text-light'>Masquer</a>
-                                            <a href='#' class='row m-2 text-light'>Signaler</a>
-                                            <a href='#' class='row m-2 text-light'>Supprimer</a>
-                                        ">
+                                        <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='#' class='row m-2 text-light'>Masquer</a><a href='#' class='row m-2 text-light'>Signaler</a><a href='#' class='row m-2 text-light'>Supprimer</a>">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </button>
                                     </div>
@@ -573,34 +491,26 @@
                                             </div>
                                             <div class="col-12 mt-3">
                                                 <div class="row">
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio1Poll4" name="poll4"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio1Poll4">Bien sûr</label>
+                                                            <input type="radio" id="Radio1Poll4" name="poll1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio1Poll1">Bien sûr</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 79%" aria-valuenow="79" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 48%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-2">
+                                                    <div class="col-12 col-md-2">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio2Poll4" name="poll4"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio2Poll4">Non c'est illégal</label>
+                                                            <input type="radio" id="Radio2Poll4" name="poll2" class="custom-control-input">
+                                                            <label class="custom-control-label" for="Radio2Poll1">Non c'est illégal</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 21%" aria-valuenow="21" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 52%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -610,120 +520,24 @@
                                     <div class="col-auto align-self-end">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i
-                                                        class="fas fa-lightbulb likeEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-lightbulb likeEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light"><i class="fas fa-share shareEvent"></i></a>
+                                                <a class="nav-link text-light">
+                                                    <i class="fas fa-share shareEvent"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-light" href="comments.html"><i
-                                                        class="fas fa-comment"></i></a>
+                                                <a class="nav-link text-light" href="comments.html">
+                                                    <i class="fas fa-comment"></i>
+                                                </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#" class="nav-link text-light" data-container="body"
-                                                   data-toggle="popover"
-                                                   data-placement="right" data-content="
-                                            <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
-                                            <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
-                                            <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
-                                        "><i class="fab fa-telegram-plane"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Un sondage -->
-                        <div class="mt-3 mb-3 card bg-dark text-light">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="ml-2 row align-items-center">
-                                            <img src="donnees/img/photos_profil/photo_5_50x50.jpg" alt="Photo de profil"
-                                                 class="rounded-circle"/>
-                                            <a class="pl-3 text-light" href="#">@ Karla</a>
-                                            <p class="pl-3 mb-0 text-light">-</p>
-                                            <p class="pl-3 mb-0 text-light">1j</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-primary mb-2 ml-2" data-container="body"
-                                                data-toggle="popover" data-placement="right" data-content="
-                                            <a href='#' class='row m-2 text-light'>Masquer</a>
-                                            <a href='#' class='row m-2 text-light'>Signaler</a>
-                                            <a href='#' class='row m-2 text-light'>Supprimer</a>
-                                        ">
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <p class="lead">Jul est-il le meilleur rappeur français de 2019 ?</p>
-                                            </div>
-                                            <div class="col-12 mt-3">
-                                                <div class="row">
-                                                    <div class="col-2">
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio1Poll5" name="poll5"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio1Poll4">Clairement</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-10">
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 98%" aria-valuenow="98" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="Radio2Poll5" name="poll5"
-                                                                   class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                   for="Radio2Poll4">Ca se discute</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-10">
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                                 style="width: 2%" aria-valuenow="2" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto align-self-end">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link text-light"><i
-                                                        class="fas fa-lightbulb likeEvent"></i></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-light"><i class="fas fa-share shareEvent"></i></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-light" href="comments.html"><i
-                                                        class="fas fa-comment"></i></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link text-light" data-container="body"
-                                                   data-toggle="popover"
-                                                   data-placement="right" data-content="
-                                            <a href='https://www.facebook.com/' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a>
-                                            <a href='https://twitter.com/' class='row m-2 text-light'><i class='fab fa-twitter'></i></a>
-                                            <a href='#' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>
-                                        "><i class="fab fa-telegram-plane"></i></a>
+                                                <a href="#" class="nav-link text-light" data-container="body" data-toggle="popover" data-placement="right" data-content="<a href='https://www.facebook.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-facebook-f'></i></a><a href='https://twitter.com/' target='_blank' class='row m-2 text-light'><i class='fab fa-twitter'></i></a><a href='#' target='_blank' class='row m-2 text-light'><i class='fas fa-external-link-alt'></i></a>">
+                                                    <i class="fab fa-telegram-plane"></i>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -744,7 +558,7 @@
                                                 <a class="text-light pl-2" href="#">@ John</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -755,7 +569,7 @@
                                                 <a class="text-light pl-2" href="#">@ Baby 5</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -766,7 +580,7 @@
                                                 <a class="text-light pl-2" href="#">@ Abby</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -777,7 +591,7 @@
                                                 <a class="text-light pl-2" href="#">@ Pauline</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -788,7 +602,7 @@
                                                 <a class="text-light pl-2" href="#">@ Serena</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -799,7 +613,7 @@
                                                 <a class="text-light pl-2" href="#">@ James</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -810,7 +624,7 @@
                                                 <a class="text-light pl-2" href="#">@ Clara</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -821,7 +635,7 @@
                                                 <a class="text-light pl-2" href="#">@ Maya</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -832,7 +646,7 @@
                                                 <a class="text-light pl-2" href="#">@ Michael</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -852,7 +666,7 @@
                                                 <a class="text-light pl-2" href="#">@ Helène</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -863,7 +677,7 @@
                                                 <a class="text-light pl-2" href="#">@ Cléa</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -874,7 +688,7 @@
                                                 <a class="text-light pl-2" href="#">@ Bart</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -885,7 +699,7 @@
                                                 <a class="text-light pl-2" href="#">@ Melissa</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -896,7 +710,7 @@
                                                 <a class="text-light pl-2" href="#">@ Serena</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -907,7 +721,7 @@
                                                 <a class="text-light pl-2" href="#">@ James</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -918,7 +732,7 @@
                                                 <a class="text-light pl-2" href="#">@ Clara</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -929,7 +743,7 @@
                                                 <a class="text-light pl-2" href="#">@ Maya</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -940,7 +754,7 @@
                                                 <a class="text-light pl-2" href="#">@ Michael</a>
                                             </div>
                                             <div>
-                                                <button type="button" class="btn btn-sm btn-secondary">Suivre</button>
+                                                <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
                                             </div>
                                         </div>
                                     </li>
@@ -988,7 +802,7 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div>
-                                        <img src="donnees/img/photos_profil/photo_1_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Jean</a>
+                                        <img src="donnees/img/photos_profil/photo_30_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Matt</a>
                                     </div>
                                     <div class="ml-auto">
                                         <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
@@ -997,7 +811,7 @@
                                 <hr>
                                 <div class="d-flex">
                                     <div>
-                                        <img src="donnees/img/photos_profil/photo_2_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Sara</a>
+                                        <img src="donnees/img/photos_profil/photo_31_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Cléa</a>
                                     </div>
                                     <div class="ml-auto">
                                         <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
@@ -1006,7 +820,7 @@
                                 <hr>
                                 <div class="d-flex">
                                     <div>
-                                        <img src="donnees/img/photos_profil/photo_3_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Hugo</a>
+                                        <img src="donnees/img/photos_profil/photo_32_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Arthur</a>
                                     </div>
                                     <div class="ml-auto">
                                         <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
@@ -1015,7 +829,7 @@
                                 <hr>
                                 <div class="d-flex">
                                     <div>
-                                        <img src="donnees/img/photos_profil/photo_4_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Lé</a>
+                                        <img src="donnees/img/photos_profil/photo_33_40x40.jpg" alt="Photo de profil" class="rounded-circle"/> <a class="text-light ml-2" href="#">@ Caitlyn</a>
                                     </div>
                                     <div class="ml-auto">
                                         <button type="button" class="btn btn-sm btn-secondary followEvent">Suivre</button>
